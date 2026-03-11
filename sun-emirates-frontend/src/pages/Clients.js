@@ -23,6 +23,9 @@ import project4 from "../images/Clients/project4.jpeg";
 import project5 from "../images/Clients/project5.jpeg";
 import project6 from "../images/Clients/project6.jpeg";
 
+/* BANNER IMAGE */
+import banner from "../images/Clients/ourclientsbg.png";
+
 const Clients = () => {
 
   const clients = [
@@ -59,8 +62,8 @@ const Clients = () => {
       {/* Banner */}
       <div style={{ textAlign: "center" }}>
         <img
-          src="/images/Clients/ourclientsbg.png"
-          alt="Clients"
+          src={banner}
+          alt="Clients Banner"
           style={{ maxWidth: "100%" }}
         />
       </div>
@@ -74,7 +77,6 @@ const Clients = () => {
         width="100%"
         style={{ marginTop: "20px" }}
       >
-
         <thead>
           <tr>
             <th>Client Name</th>
@@ -110,7 +112,6 @@ const Clients = () => {
           marginTop: "20px"
         }}
       >
-
         {projects.map((img, index) => (
           <img
             key={index}
@@ -124,7 +125,6 @@ const Clients = () => {
             }}
           />
         ))}
-
       </div>
 
     </div>
