@@ -8,7 +8,6 @@ const Services = () => {
     'Shuttering & Manholes',
     'Bending of Pipes',
     'Blasting and Painting',
-    'Performing Welders',
     'Onshore and offshore services'
   ];
 
