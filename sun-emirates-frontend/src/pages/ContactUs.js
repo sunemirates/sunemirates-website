@@ -12,6 +12,9 @@ const ContactUs = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
+  // Use environment variable or empty string for API URL
+  const apiUrl = process.env.REACT_APP_API_URL || '';
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -26,7 +29,7 @@ const ContactUs = () => {
     setError('');
     
     try {
-      const response = await fetch('/api/contact/send', {
+      const response = await fetch(`${apiUrl}/api/contact/send`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
