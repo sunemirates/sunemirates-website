@@ -1,13 +1,29 @@
 const express = require("express");
 const router = express.Router();
-const Contact = require("../models/Contact");
+const mongoose = require("mongoose");
 const nodemailer = require("nodemailer");
+require("dotenv").config();
+
+/* Mongo Schema */
+
+const ContactSchema = new mongoose.Schema(
+{
+name: String,
+phone: String,
+email: String,
+message: String,
+company: String
+},
+{ timestamps: true }
+);
+
+const Contact = mongoose.model("Contact", ContactSchema);
 
 router.post("/send", async (req, res) => {
 
 try {
 
-const { name, phone, email, message } = req.body;
+const { name, phone, email, message, company } = req.body;
 
 /* Save to MongoDB */
 
@@ -15,7 +31,8 @@ const newContact = new Contact({
 name,
 phone,
 email,
-message
+message,
+company
 });
 
 await newContact.save();
@@ -25,18 +42,19 @@ await newContact.save();
 const transporter = nodemailer.createTransport({
 service: "gmail",
 auth: {
-user: "yourgmail@gmail.com",
-pass: "your_app_password"
+user: process.env.EMAIL_USER || "sunemirates14655@gmail.com",
+pass: process.env.EMAIL_PASS || "your_app_password"
 }
 });
 
 const mailOptions = {
 from: email,
-to: "yourgmail@gmail.com",
-subject: "New Contact Message - Sun Emirates Website",
+to: process.env.EMAIL_USER || "sunemirates14655@gmail.com",
+subject: `New Contact Message from ${name}`,
 html: `
-<h3>New Contact Message</h3>
+<h3>New Contact Message - Sun Emirates Website</h3>
 <p><b>Name:</b> ${name}</p>
+<p><b>Company:</b> ${company || 'N/A'}</p>
 <p><b>Phone:</b> ${phone}</p>
 <p><b>Email:</b> ${email}</p>
 <p><b>Message:</b> ${message}</p>

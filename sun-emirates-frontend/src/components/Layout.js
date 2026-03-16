@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import Breadcrumb from "./Breadcrumb";
-import WhatsAppButton from "./WhatsAppButton";
 import Chatbot from "./Chatbot";   // Import Chatbot
 
 const Layout = () => {
@@ -25,7 +24,7 @@ const Layout = () => {
       <Footer />
 
       {/* Floating Support Buttons */}
-      <WhatsAppButton />
+      
       <Chatbot />
 
     </div>

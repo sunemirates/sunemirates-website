@@ -15,6 +15,20 @@ mongoose
   .then(() => console.log("✅MongoDB Connected"))
   .catch((err) => console.log(err));
 
+// Import Routes
+const contactRoutes = require("./routes/Contact");
+const equipmentRoutes = require("./routes/equipment");
+const galleryRoutes = require("./routes/gallery");
+const clientsRoutes = require("./routes/clients");
+const feedbackRoutes = require("./routes/feedback");
+
+// Use Routes
+app.use("/api/contact", contactRoutes);
+app.use("/api/equipment", equipmentRoutes);
+app.use("/api/gallery", galleryRoutes);
+app.use("/api/clients", clientsRoutes);
+app.use("/api/feedback", feedbackRoutes);
+
 app.get("/", (req, res) => {
   res.send("Sun Emirates API Running");
 });
