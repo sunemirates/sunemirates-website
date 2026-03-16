@@ -285,7 +285,7 @@ function Home() {
       </section>
 
       {/* Chatbot */}
-      <Chatbot />
+      
     </div>
   );
 }
