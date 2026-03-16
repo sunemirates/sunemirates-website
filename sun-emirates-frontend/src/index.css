@@ -1195,33 +1195,47 @@ textarea {
 }
 
 /* ==================== CHATBOT STYLES ==================== */
+
+/* Chatbot Icon (same size as WhatsApp) */
+
 .chatIcon {
   position: fixed;
-  bottom: 30px;
+  bottom: 20px;
   right: 30px;
   z-index: 1000;
   cursor: pointer;
 }
 
 .chatIcon img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
 }
+
+.chatIcon img:hover{
+  transform: scale(1.1);
+}
+
+
+/* Chat Window */
 
 .chatContainer {
   position: fixed;
-  bottom: 100px;
+  bottom: 110px;   /* above icons */
   right: 30px;
   width: 350px;
   max-width: 90vw;
   background: white;
   border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
   z-index: 1000;
   overflow: hidden;
 }
+
+
+/* Chat Header */
 
 .chatHeader {
   background-color: var(--color-secondary-dark);
@@ -1231,12 +1245,18 @@ textarea {
   font-family: var(--font-heading);
 }
 
+
+/* Chat Body */
+
 .chatBody {
   height: 300px;
   overflow-y: auto;
   padding: 15px;
   background: #f9f9f9;
 }
+
+
+/* Bot Message */
 
 .botMessage {
   background-color: var(--color-secondary-dark);
@@ -1247,6 +1267,9 @@ textarea {
   display: inline-block;
   max-width: 80%;
 }
+
+
+/* User Message */
 
 .userMessage {
   background-color: var(--color-accent);
@@ -1259,12 +1282,18 @@ textarea {
   margin-left: auto;
 }
 
+
+/* Input Area */
+
 .inputArea {
   display: flex;
   padding: 15px;
   border-top: 1px solid #eee;
   gap: 10px;
 }
+
+
+/* Input Field */
 
 .chatInput {
   flex: 1;
@@ -1273,6 +1302,9 @@ textarea {
   border-radius: 5px;
   font-family: var(--font-body);
 }
+
+
+/* Send Button */
 
 .chatButton {
   padding: 10px 20px;

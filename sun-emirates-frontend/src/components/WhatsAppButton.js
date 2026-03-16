@@ -10,7 +10,7 @@ const WhatsAppButton = () => {
     >
       <img
         src="/images/Common/whatsapp.png"
-        alt="WhatsApp Chat"
+        alt="WhatsApp"
       />
     </a>
   );

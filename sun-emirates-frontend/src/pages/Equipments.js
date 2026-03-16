@@ -5,65 +5,61 @@ const Equipments = () => {
 
   const equipmentData = [
     {
-      category: "Machining Equipment",
-      items: [
-        { name: "Lathe Machine", model: "Industrial Series", capacity: "12' x 24'", description: "Precision turning operations" },
-        { name: "Radial Drilling Machine", model: "RD-1200", capacity: "50mm", description: "Heavy duty drilling" },
-        { name: "Pillar Drilling Machine", model: "PD-350", capacity: "35mm", description: "Precision drilling" },
-        { name: "Shaping Machine", model: "SH-500", capacity: "500mm stroke", description: "Metal shaping" },
-        { name: "Milling Machine", model: "VF-2", capacity: "3-Axis", description: "CNC milling capability" },
-        { name: "Grinding Machine", model: "GS-250", capacity: "250mm", description: "Surface grinding" }
-      ]
-    },
-    {
-      category: "Shearing & Bending",
-      items: [
-        { name: "Hydraulic Shearing Machine", model: "HS-1025", capacity: "10mm x 2500mm", description: "Precision sheet cutting" },
-        { name: "Hydraulic Press Brake", model: "HPB-2032", capacity: "20mm x 3200mm", description: "Precision bending" },
-        { name: "Hand Shearing Machine", model: "HSS-6", capacity: "6mm", description: "Manual sheet cutting" },
-        { name: "Hand Bending Machine", model: "HBM-4", capacity: "4mm", description: "Manual bending" },
-        { name: "Pipe Bending Machine", model: "PBM-8", capacity: "2\" to 8\"", description: "Pipe bending" },
-        { name: "Profile Bending Machine", model: "PRB-150", capacity: "150mm", description: "Profile rolling" }
-      ]
-    },
-    {
-      category: "Cutting & Grinding",
-      items: [
-        { name: "Gas Cutting Equipment", model: "GC-200", capacity: "200mm thickness", description: "Oxy-fuel cutting" },
-        { name: "Arc Air Gouging", model: "AAG-100", capacity: "100A", description: "Air carbon arc gouging" },
-        { name: "Portable Grinding Machine", model: "PGM-180", capacity: "180mm disc", description: "Angle grinder" },
-        { name: "Bench Grinding Machine", model: "BGM-300", capacity: "300mm wheel", description: "Stationary grinding" },
-        { name: "Cut-off Machine", model: "COM-14", capacity: "14\" wheel", description: " abrasive cutting" }
-      ]
-    },
-    {
       category: "Welding Equipment",
       items: [
-        { name: "MIG Welding Machine", model: "MIG-350", capacity: "350A", description: "Gas metal arc welding" },
-        { name: "ARC Welding Machine", model: "ARC-400", capacity: "400A", description: "Shielded metal arc welding" },
-        { name: "TIG Welding Machine", model: "TIG-300", capacity: "300A", description: "Gas tungsten arc welding" },
-        { name: "Welding Rectifier", model: "WR-500", capacity: "500A", description: "DC welding power source" },
-        { name: "Submerged Arc Welding", model: "SAW-1000", capacity: "1000A", description: "Automatic welding" }
+        { name: "Welding Machines - SMAW Rectifier", model: "400 Amps", capacity: "8 Nos", description: "Shielded Metal Arc Welding Rectifier" },
+        { name: "Welding Machines - TIG", model: "400 Amps", capacity: "4 Nos", description: "Tungsten Inert Gas Welding Machine" }
       ]
     },
     {
-      category: "Surface Treatment",
+      category: "Machining Equipment",
       items: [
-        { name: "Sand Blasting Machine", model: "SBM-2460", capacity: "2400 x 600mm", description: "Abrasive blasting" },
-        { name: "Shot Blasting Machine", model: "SBT-2015", capacity: "2000 x 1500mm", description: "Shot/peening" },
-        { name: "Paint Booth", model: "PB-8000", capacity: "8000 CFM", description: "Spray painting" },
-        { name: "Air Compressor", model: "AC-15HP", capacity: "15HP", description: "Industrial compressed air" },
-        { name: "Air Compressor", model: "AC-10HP", capacity: "10HP", description: "Secondary compression" }
+        { name: "Iron Worker", model: "60 Ton", capacity: "1 No", description: "Hydraulic iron worker machine" },
+        { name: "Center Lathe", model: "Standard", capacity: "1 No", description: "Precision turning operations" },
+        { name: "Pipe Bending Machine", model: "1/2 in - 2 in", capacity: "1 No", description: "Pipe bending for various sizes" },
+        { name: "Radial Drilling Machine", model: "upto 50mm dia", capacity: "1 No", description: "Heavy duty drilling operations" },
+        { name: "Pillar Type Drilling Machine", model: "upto 32mm Dia", capacity: "2 Nos", description: "Precision drilling operations" },
+        { name: "Magnetic Drilling Machines", model: "Standard", capacity: "2 Nos", description: "Magnetic base drilling equipment" }
+      ]
+    },
+    {
+      category: "Cutting Equipment",
+      items: [
+        { name: "Disc Cutting Machines", model: "16 in", capacity: "3 Nos", description: "Disc cutting for metal fabrication" },
+        { name: "Power Hack saw", model: "12 in", capacity: "1 No", description: "Power hacksaw for cutting" },
+        { name: "Hammer Drilling Machine", model: "Hilti", capacity: "3 Nos", description: "Hammer drilling equipment" },
+        { name: "Acetylene Gas cutting Sets", model: "Standard", capacity: "7 Nos", description: "Oxy-acetylene gas cutting" },
+        { name: "Parallel pug cutting machine", model: "Standard", capacity: "2 Nos", description: "Parallel cutting machine" }
+      ]
+    },
+    {
+      category: "Compressors & Surface Treatment",
+      items: [
+        { name: "Air Compressors", model: "150 Litre", capacity: "2 Nos", description: "150 Litre capacity compressor" },
+        { name: "Air Compressors", model: "200 Litre", capacity: "1 No", description: "200 Litre capacity compressor" },
+        { name: "Spray paint system", model: "Standard", capacity: "2 Nos", description: "Industrial spray painting" },
+        { name: "Bench Grinder", model: "Standard", capacity: "1 No", description: "Stationary grinding machine" },
+        { name: "Buffing Machine", model: "12 in", capacity: "2 Nos", description: "Buffing and polishing" },
+        { name: "Sanding Machines", model: "Standard", capacity: "8 Nos", description: "Sanding and finishing" },
+        { name: "Hand Grinding Machines", model: "Standard", capacity: "25 Nos", description: "Portable angle grinders" }
       ]
     },
     {
       category: "Material Handling",
       items: [
-        { name: "EOT Crane", model: "EOT-10T", capacity: "10 Ton", description: "Overhead crane" },
-        { name: "EOT Crane", model: "EOT-10T", capacity: "10 Ton", description: "Secondary crane" },
-        { name: "Forklift", model: "FL-5T", capacity: "5 Ton", description: "Material handling" },
-        { name: "Forklift", model: "FL-3T", capacity: "3 Ton", description: "Light duty" },
-        { name: "Mobile Crane", model: "MC-20T", capacity: "20 Ton", description: "Truck mounted crane" }
+        { name: "Mobile A Frame", model: "2 Ton capacity", capacity: "1 No", description: "Mobile lifting frame" },
+        { name: "Pick Up", model: "1.5 Ton - 2 Nos", capacity: "2 Nos", description: "1.5 Ton pick up vehicles" },
+        { name: "Pick Up", model: "3 Ton - 1 No", capacity: "1 No", description: "3 Ton pick up vehicle" }
+      ]
+    },
+    {
+      category: "Shearing, Bending & Pressing",
+      items: [
+        { name: "Shearing Machine", model: "8mm capacity - 3 Mtr Long", capacity: "1 No", description: "Sheet metal shearing" },
+        { name: "Bending Machine", model: "8mm capacity - 3 Mtr Long", capacity: "1 No", description: "Sheet metal bending" },
+        { name: "Hydraulic Pressing Machine", model: "200 Ton", capacity: "2 Nos", description: "Hydraulic pressing operations" },
+        { name: "Rolling Machine", model: "3 mm thk x 3 Mtr Long", capacity: "1 No", description: "Plate rolling machine" },
+        { name: "Power Pressing Machine", model: "60 Ton - 1 / 120 Ton - 1", capacity: "2 Nos", description: "Power pressing operations" }
       ]
     }
   ];
