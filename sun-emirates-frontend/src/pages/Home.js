@@ -70,7 +70,7 @@ const services = [
 ];
 
 const stats = [
-  { number: "15+", label: "Years Experience" },
+  { number: "19+", label: "Years Experience" },
   { number: "500+", label: "Projects Completed" },
   { number: "50+", label: "Skilled Workers" },
   { number: "100%", label: "Quality Assurance" }
@@ -132,7 +132,7 @@ function Home() {
               <p>
                 We are a leading steel fabrication company located in Al Shenaya 
                 New Industrial Area, Ajman, U.A.E., established in 2007. With over 
-                15 years of experience, we specialize in stainless steel and mild 
+                19 years of experience, we specialize in stainless steel and mild 
                 steel fabrication for construction, interior decoration, marine, 
                 power, and oil & gas sectors.
               </p>
@@ -206,27 +206,18 @@ function Home() {
           </div>
           <div className="equipment-grid">
             <div className="equipment-card">
-              <div className="equipment-image">
-                <img src="/images/MS/Grating.jpg" alt="Grating" />
-              </div>
               <div className="equipment-info">
                 <h3>Steel Grating</h3>
                 <p>Industrial grating and floor systems</p>
               </div>
             </div>
             <div className="equipment-card">
-              <div className="equipment-image">
-                <img src="/images/MS/Piping.jpg" alt="Piping" />
-              </div>
               <div className="equipment-info">
                 <h3>Pipe Fabrication</h3>
                 <p>Custom pipe systems and supports</p>
               </div>
             </div>
             <div className="equipment-card">
-              <div className="equipment-image">
-                <img src="/images/MS/PlatformStructure.jpg" alt="Platform" />
-              </div>
               <div className="equipment-info">
                 <h3>Platform Structures</h3>
                 <p>Industrial platforms and walkways</p>

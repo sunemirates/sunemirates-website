@@ -12,59 +12,32 @@ const Services = () => {
   ];
 
   return (
-    <div className="pgeCntWrapper">
-      <table cellpadding="0" border="0" cellspacing="0" width="100%">
-        <tbody>
-          <tr>
-            <td width="70%" align="left">
-              <table cellpadding="2" cellspacing="0" border="0" width="100%">
-                <tbody>
-                  <tr>
-                    <td>
-                      <span className="PageHeader">Services</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">
-                      <img 
-                        src="/images/Common/Servicesbnr.png" 
-                        alt="Services" 
-                        title="Services"
-                        align="absMiddle"
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style={{ height: '20px' }}>
-                      &nbsp;
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="servicetd">
-                      <div className="titldv">
-                        We are specialized in the following services:
-                      </div>
-                      <div className="desdv">
-                        <ul>
-                          {services.map((service, index) => (
-                            <li key={index}>{service}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-            <td width="30%"></td>
-          </tr>
-          <tr>
-            <td style={{ height: '25px' }} colSpan={2}>
-              &nbsp;
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div>
+      {/* Page Header - Grey Bar */}
+      <div className="page-header">
+        <div className="container">
+          <h1>Services</h1>
+          <p>Professional Steel Fabrication Services</p>
+        </div>
+      </div>
+
+      {/* Services Section */}
+      <section className="section">
+        <div className="container">
+          <div className="servicetd">
+            <div className="titldv">
+              We are specialized in the following services:
+            </div>
+            <div className="desdv">
+              <ul>
+                {services.map((service, index) => (
+                  <li key={index}>{service}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

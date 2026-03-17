@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -21,13 +25,13 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="footer-section">
             <h4>Quick Links</h4>
-            <Link to="/">Home</Link>
-            <Link to="/about">About Us</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/equipments">Equipments</Link>
-            <Link to="/clients">Clients</Link>
-            <Link to="/gallery">Gallery</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/" onClick={scrollToTop}>Home</Link>
+            <Link to="/about" onClick={scrollToTop}>About Us</Link>
+            <Link to="/services" onClick={scrollToTop}>Services</Link>
+            <Link to="/equipments" onClick={scrollToTop}>Equipments</Link>
+            <Link to="/clients" onClick={scrollToTop}>Clients</Link>
+            <Link to="/gallery" onClick={scrollToTop}>Gallery</Link>
+            <Link to="/contact" onClick={scrollToTop}>Contact</Link>
           </div>
 
           {/* Services */}

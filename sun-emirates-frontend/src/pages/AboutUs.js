@@ -145,7 +145,9 @@ const AboutUs = () => {
                 proper material handling systems and quality control checkpoints.
               </p>
               <ul className="features-list">
-                <li>Covered workshop area: 15,000+ sq meters</li>
+                <li>Work shop - Open Area  :  6000 Sq. feet </li>
+                <li>Work shop - Covered Area  :  10000 Sq. feet</li>
+                <li>Total Area : 16000 Sq. feet </li>
                 <li>Advanced welding equipment</li>
                 <li>Surface treatment facilities</li>
                 <li>Material storage and handling</li>

@@ -13,12 +13,12 @@ const Gallery = () => {
 
   const galleryItems = [
     // Workshop
-    { id: 1, category: 'workshop', image: '/images/MS/IndustrialSheds.jpg', title: 'Main Workshop' },
-    { id: 2, category: 'workshop', image: '/images/MS/PlatformStructure.jpg', title: 'Production Floor' },
+    //{ id: 1, category: 'workshop', image: '/images/MS/IndustrialSheds.jpg', title: 'Main Workshop' },
+    //{ id: 2, category: 'workshop', image: '/images/MS/PlatformStructure.jpg', title: 'Production Floor' },
     
     // Fabrication
-    { id: 3, category: 'fabrication', image: '/images/MS/Grating.jpg', title: 'Steel Grating' },
-    { id: 4, category: 'fabrication', image: '/images/MS/Piping.jpg', title: 'Pipe Fabrication' },
+    //{ id: 3, category: 'fabrication', image: '/images/MS/Grating.jpg', title: 'Steel Grating' },
+    //{ id: 4, category: 'fabrication', image: '/images/MS/Piping.jpg', title: 'Pipe Fabrication' },
     { id: 5, category: 'fabrication', image: '/images/MS/GratingStructure.jpg', title: 'Grating Structure' },
     { id: 6, category: 'fabrication', image: '/images/MS/MezzanineSteelFloor.jpg', title: 'Mezzanine Floor' },
     
