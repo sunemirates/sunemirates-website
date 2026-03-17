@@ -146,10 +146,8 @@ const AboutUs = () => {
               </p>
               <ul className="features-list">
                 <li>Covered workshop area: 15,000+ sq meters</li>
-                <li>EOT Cranes: 10-ton capacity</li>
                 <li>Advanced welding equipment</li>
                 <li>Surface treatment facilities</li>
-                <li>Quality testing laboratory</li>
                 <li>Material storage and handling</li>
               </ul>
             </div>
