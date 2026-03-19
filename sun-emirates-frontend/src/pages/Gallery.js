@@ -19,14 +19,14 @@ const Gallery = () => {
     // Fabrication
     //{ id: 3, category: 'fabrication', image: '/images/MS/Grating.jpg', title: 'Steel Grating' },
     //{ id: 4, category: 'fabrication', image: '/images/MS/Piping.jpg', title: 'Pipe Fabrication' },
-    { id: 5, category: 'fabrication', image: '/images/MS/GratingStructure.jpg', title: 'Grating Structure' },
-    { id: 6, category: 'fabrication', image: '/images/MS/MezzanineSteelFloor.jpg', title: 'Mezzanine Floor' },
+    //{ id: 5, category: 'fabrication', image: '/images/MS/GratingStructure.jpg', title: 'Grating Structure' },
+    //{ id: 6, category: 'fabrication', image: '/images/MS/MezzanineSteelFloor.jpg', title: 'Mezzanine Floor' },
     
     // Equipment
     { id: 7, category: 'equipment', image: '/images/MS/Ladder.jpg', title: 'Industrial Ladder' },
     { id: 8, category: 'equipment', image: '/images/MS/StairCase.jpg', title: 'Staircase' },
-    { id: 9, category: 'equipment', image: '/images/MS/PipeSupport.jpg', title: 'Pipe Support' },
-    { id: 10, category: 'equipment', image: '/images/MS/LoadingPlatform.jpg', title: 'Loading Platform' },
+    //{ id: 9, category: 'equipment', image: '/images/MS/PipeSupport.jpg', title: 'Pipe Support' },
+    //{ id: 10, category: 'equipment', image: '/images/MS/LoadingPlatform.jpg', title: 'Loading Platform' },
     
     // Projects
     { id: 11, category: 'projects', image: '/images/Clients/project1.jpeg', title: 'Project 1' },
