@@ -55,7 +55,7 @@ const AboutUs = () => {
               <p>
                 Sun Emirates Mechanical Works LLC is a leading steel fabrication 
                 company established in 2007 in Al Shenaya New Industrial Area, 
-                Ajman, United Arab Emirates. With over 15 years of experience, 
+                Ajman, United Arab Emirates. With over 19 years of experience, 
                 we have built a reputation for delivering high-quality fabrication 
                 solutions to clients across various sectors.
               </p>

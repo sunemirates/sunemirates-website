@@ -23,8 +23,8 @@ const Gallery = () => {
     //{ id: 6, category: 'fabrication', image: '/images/MS/MezzanineSteelFloor.jpg', title: 'Mezzanine Floor' },
     
     // Equipment
-    { id: 7, category: 'equipment', image: '/images/MS/Ladder.jpg', title: 'Industrial Ladder' },
-    { id: 8, category: 'equipment', image: '/images/MS/StairCase.jpg', title: 'Staircase' },
+    //{ id: 7, category: 'equipment', image: '/images/MS/Ladder.jpg', title: 'Industrial Ladder' },
+    //{ id: 8, category: 'equipment', image: '/images/MS/StairCase.jpg', title: 'Staircase' },
     //{ id: 9, category: 'equipment', image: '/images/MS/PipeSupport.jpg', title: 'Pipe Support' },
     //{ id: 10, category: 'equipment', image: '/images/MS/LoadingPlatform.jpg', title: 'Loading Platform' },
     
