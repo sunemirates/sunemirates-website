@@ -1199,7 +1199,7 @@ textarea {
 /* WhatsApp Icon */
 .whatsappIcon {
   position: fixed;
-  bottom: 100px;
+  bottom: 130px;
   right: 30px;
   z-index: 1000;
   cursor: pointer;
