@@ -4,6 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Breadcrumb from "./Breadcrumb";
 import Chatbot from "./Chatbot";   // Import Chatbot
+import WhatsApp from "./WhatsApp"; // Import WhatsApp
 
 const Layout = () => {
   return (
@@ -25,6 +26,7 @@ const Layout = () => {
 
       {/* Floating Support Buttons */}
       
+      <WhatsApp />
       <Chatbot />
 
     </div>

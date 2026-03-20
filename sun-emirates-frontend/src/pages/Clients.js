@@ -17,6 +17,42 @@ const Clients = () => {
     { src: "/images/Clients/Clients13.png", alt: "AL REYAMI INTERIORS", category: "Interior" }
   ];
 
+  const clientList = [
+    "KHANSAHEB CIVIL ENGG. L.L.C",
+    "Blueprint Emirates Interiors L.L.C",
+    "HTS Interior Design L.L.C",
+    "Unger Steel Fabrication FZE",
+    "Arab Gulf Equipment CO. L.L.C",
+    "Engineering office",
+    "Human Space Office Furnishing L.L.C.",
+    "Golden Arch Décor L.L.C",
+    "EMIRATES SUN CONTRACTING CO. LLC",
+    "PREZON GLASS METAL FIXING LLC",
+    "AL QASR AL AMIR TECH. CONT. LLC",
+    "AL FUTTAIM ENGINEERING & TECHNOLOGIES",
+    "AQUINOR TECHNICAL SERVICES LLC",
+    "ARABIAN COMPANY L.L.C",
+    "Modena Industries LLC",
+    "BIOLINX LAB SYSTEMS LLC",
+    "SECURE SHOPFRONT & PARTITIONS LLC",
+    "VINAYAK INTERIORS LLC",
+    "OFFICE POWER SOLUTIONS L.L.C",
+    "BLUEGATE ELECTROMECHANICAL WORKS LLC",
+    "SSK BUILDING CONTRACTING LLC",
+    "ENOVA",
+    "AURA JOINERY OFFICE FURNITURE MANUFACTURING LLC",
+    "BRIGHTWAY TECHNICAL SERVICES",
+    "MFIT INTERIOR DECORATION LLC",
+    "MOSTONE TECH. SERVICES LLC",
+    "DUTCO INTERIORS",
+    "LANDMARK GROUP",
+    "SHAPOORJI PALLONJI",
+    "ENGCORE TECHNICAL SERVICES LLC",
+    "CITY GATE REAL ESTATE",
+    "INC GROUP",
+    "PACIO FZC"
+  ];
+
   const clientCategories = [
     { name: "Construction", count: 5 },
     { name: "Engineering", count: 1 },
@@ -64,8 +100,39 @@ const Clients = () => {
         </div>
       </section>
 
-      {/* Client Categories */}
+      {/* Client List Table */}
       <section className="section bg-light">
+        <div className="container">
+          <div className="text-center mb-40">
+            <h2>Our Client List</h2>
+            <p className="text-light">
+              Complete list of companies we have worked with
+            </p>
+          </div>
+
+          <div className="table-responsive">
+            <table className="client-table">
+              <thead>
+                <tr>
+                  <th>S.No.</th>
+                  <th>Client Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                {clientList.map((clientName, index) => (
+                  <tr key={index}>
+                    <td>{index + 1}</td>
+                    <td>{clientName}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Categories */}
+      <section className="section">
         <div className="container">
           <div className="text-center mb-40">
             <h2>Industries We Serve</h2>

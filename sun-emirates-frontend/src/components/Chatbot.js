@@ -98,12 +98,6 @@ Send
 <img
 src="/images/chatbot/chatbot.png"
 alt="chatbot"
-style={{
-width: "60px",
-height: "60px",
-borderRadius: "50%",
-boxShadow: "0 4px 10px rgba(0,0,0,0.3)"
-}}
 />
 
 </div>
