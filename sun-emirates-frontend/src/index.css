@@ -1473,7 +1473,7 @@ textarea {
   }
 
   .chat-toggle-btn {
-    bottom: 20px;
+    bottom: 90px;
     right: 20px;
     width: 56px;
     height: 56px;
@@ -1482,6 +1482,18 @@ textarea {
   .chat-toggle-btn img {
     width: 28px;
     height: 28px;
+  }
+
+  .whatsappIcon {
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  .whatsappIcon img {
+    width: 56px;
+    height: 56px;
+    padding: 12px;
   }
 }
 
