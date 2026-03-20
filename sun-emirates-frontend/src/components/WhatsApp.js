@@ -2,7 +2,7 @@ import React from "react";
 
 const WhatsApp = () => {
   // WhatsApp phone number (without + symbol for the API URL)
-  const phoneNumber = "1507743556";
+  const phoneNumber = "507743556";
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (
