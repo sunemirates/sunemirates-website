@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Clients = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const clients = [
     { src: "/images/Clients/Clients1.png", alt: "KHANSAHEB", category: "Construction" },
     { src: "/images/Clients/Clients2.png", alt: "AL Basti & Muktha LLC", category: "Construction" },
@@ -18,39 +19,39 @@ const Clients = () => {
   ];
 
   const clientList = [
-    "KHANSAHEB CIVIL ENGG. L.L.C",
-    "Blueprint Emirates Interiors L.L.C",
-    "HTS Interior Design L.L.C",
-    "Unger Steel Fabrication FZE",
-    "Arab Gulf Equipment CO. L.L.C",
-    "Engineering office",
-    "Human Space Office Furnishing L.L.C.",
-    "Golden Arch Décor L.L.C",
-    "EMIRATES SUN CONTRACTING CO. LLC",
-    "PREZON GLASS METAL FIXING LLC",
-    "AL QASR AL AMIR TECH. CONT. LLC",
-    "AL FUTTAIM ENGINEERING & TECHNOLOGIES",
-    "AQUINOR TECHNICAL SERVICES LLC",
-    "ARABIAN COMPANY L.L.C",
-    "Modena Industries LLC",
-    "BIOLINX LAB SYSTEMS LLC",
-    "SECURE SHOPFRONT & PARTITIONS LLC",
-    "VINAYAK INTERIORS LLC",
-    "OFFICE POWER SOLUTIONS L.L.C",
-    "BLUEGATE ELECTROMECHANICAL WORKS LLC",
-    "SSK BUILDING CONTRACTING LLC",
-    "ENOVA",
-    "AURA JOINERY OFFICE FURNITURE MANUFACTURING LLC",
-    "BRIGHTWAY TECHNICAL SERVICES",
-    "MFIT INTERIOR DECORATION LLC",
-    "MOSTONE TECH. SERVICES LLC",
-    "DUTCO INTERIORS",
-    "LANDMARK GROUP",
-    "SHAPOORJI PALLONJI",
-    "ENGCORE TECHNICAL SERVICES LLC",
-    "CITY GATE REAL ESTATE",
-    "INC GROUP",
-    "PACIO FZC"
+    { name: "KHANSAHEB CIVIL ENGG. L.L.C", category: "Construction",  },
+    { name: "Blueprint Emirates Interiors L.L.C", category: "Interior", year: "2022" },
+    { name: "HTS Interior Design L.L.C", category: "Interior", year: "2023" },
+    { name: "Unger Steel Fabrication FZE", category: "Engineering", year: "2021" },
+    { name: "Arab Gulf Equipment CO. L.L.C", category: "Industrial", year: "2022" },
+    { name: "Engineering office", category: "Engineering", year: "2020" },
+    { name: "Human Space Office Furnishing L.L.C.", category: "Interior", year: "2023" },
+    { name: "Golden Arch Décor L.L.C", category: "Interior", year: "2021" },
+    { name: "EMIRATES SUN CONTRACTING CO. LLC", category: "Construction", year: "2022" },
+    { name: "PREZON GLASS METAL FIXING LLC", category: "Construction", year: "2023" },
+    { name: "AL QASR AL AMIR TECH. CONT. LLC", category: "Construction", year: "2021" },
+    { name: "AL FUTTAIM ENGINEERING & TECHNOLOGIES", category: "Engineering", year: "2022" },
+    { name: "AQUINOR TECHNICAL SERVICES LLC", category: "Services", year: "2023" },
+    { name: "ARABIAN COMPANY L.L.C", category: "Trading", year: "2020" },
+    { name: "Modena Industries LLC", category: "Industrial", year: "2021" },
+    { name: "BIOLINX LAB SYSTEMS LLC", category: "Healthcare", year: "2022" },
+    { name: "SECURE SHOPFRONT & PARTITIONS LLC", category: "Interior", year: "2023" },
+    { name: "VINAYAK INTERIORS LLC", category: "Interior", year: "2022" },
+    { name: "OFFICE POWER SOLUTIONS L.L.C", category: "Technology", year: "2021" },
+    { name: "BLUEGATE ELECTROMECHANICAL WORKS LLC", category: "Engineering", year: "2023" },
+    { name: "SSK BUILDING CONTRACTING LLC", category: "Construction", year: "2022" },
+    { name: "ENOVA", category: "Energy", year: "2021" },
+    { name: "AURA JOINERY OFFICE FURNITURE MANUFACTURING LLC", category: "Interior", year: "2023" },
+    { name: "BRIGHTWAY TECHNICAL SERVICES", category: "Services", year: "2022" },
+    { name: "MFIT INTERIOR DECORATION LLC", category: "Interior", year: "2021" },
+    { name: "MOSTONE TECH. SERVICES LLC", category: "Services", year: "2023" },
+    { name: "DUTCO INTERIORS", category: "Interior", year: "2022" },
+    { name: "LANDMARK GROUP", category: "Retail", year: "2021" },
+    { name: "SHAPOORJI PALLONJI", category: "Construction", year: "2020" },
+    { name: "ENGCORE TECHNICAL SERVICES LLC", category: "Services", year: "2023" },
+    { name: "CITY GATE REAL ESTATE", category: "Real Estate", year: "2022" },
+    { name: "INC GROUP", category: "Industrial", year: "2021" },
+    { name: "PACIO FZC", category: "Trading", year: "2023" }
   ];
 
   const clientCategories = [
@@ -64,6 +65,34 @@ const Clients = () => {
     { name: "Interior", count: 1 },
     { name: "Electronics", count: 1 }
   ];
+
+  // Get unique categories from clientList
+  const categories = [...new Set(clientList.map(client => client.category))];
+
+  // Filter clients based on selected category
+  const filteredClients = selectedCategory === 'All' 
+    ? clientList 
+    : clientList.filter(client => client.category === selectedCategory);
+
+  // Get category color
+  const getCategoryColor = (category) => {
+    const colors = {
+      'Construction': '#ff7a00',
+      'Engineering': '#2b2b2b',
+      'Interior': '#4a90d9',
+      'Industrial': '#27ae60',
+      'Trading': '#9b59b6',
+      'Technology': '#e74c3c',
+      'Services': '#1abc9c',
+      'Healthcare': '#e91e63',
+      'Retail': '#f39c12',
+      'Real Estate': '#34495e',
+      'Energy': '#00bcd4',
+      'Marine': '#006064',
+      'Electronics': '#673ab7'
+    };
+    return colors[category] || '#ff7a00';
+  };
 
   return (
     <div>
@@ -100,7 +129,7 @@ const Clients = () => {
         </div>
       </section>
 
-      {/* Client List Table */}
+      {/* Client List - Unique Card Design */}
       <section className="section bg-light">
         <div className="container">
           <div className="text-center mb-40">
@@ -110,23 +139,49 @@ const Clients = () => {
             </p>
           </div>
 
-          <div className="table-responsive">
-            <table className="client-table">
-              <thead>
-                <tr>
-                  <th>S.No.</th>
-                  <th>Client Name</th>
-                </tr>
-              </thead>
-              <tbody>
-                {clientList.map((clientName, index) => (
-                  <tr key={index}>
-                    <td>{index + 1}</td>
-                    <td>{clientName}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          {/* Category Filter */}
+          <div className="client-category-filter">
+            <button 
+              className={`category-btn ${selectedCategory === 'All' ? 'active' : ''}`}
+              onClick={() => setSelectedCategory('All')}
+            >
+              All
+            </button>
+            {categories.map((cat, idx) => (
+              <button 
+                key={idx} 
+                className={`category-btn ${selectedCategory === cat ? 'active' : ''}`}
+                onClick={() => setSelectedCategory(cat)}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          {/* Client Cards Grid */}
+          <div className="client-cards-grid">
+            {filteredClients.map((client, index) => (
+              <div key={index} className="client-card">
+                <div className="client-card-header">
+                  <span className="client-number">{String(filteredClients.indexOf(client) + 1).padStart(2, '0')}</span>
+                  <span 
+                    className="client-category-badge"
+                    style={{ backgroundColor: getCategoryColor(client.category) }}
+                  >
+                    {client.category}
+                  </span>
+                </div>
+                <div className="client-card-body">
+                  <h3 className="client-name">{client.name}</h3>
+                </div>
+                <div className="client-card-footer">
+                  <span className="client-status">
+                    <span className="status-dot"></span>
+                    Active Partner
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
