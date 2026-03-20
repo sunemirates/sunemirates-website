@@ -14,7 +14,7 @@ const WhatsApp = () => {
       title="Chat on WhatsApp"
     >
       <img
-        src="/images/common/whatsapp.png"
+        src="/images/Common/whatsapp.png"
         alt="WhatsApp"
       />
     </a>
