@@ -31,12 +31,15 @@ useEffect(() => {
 
 // Handle toggle with mobile support
   const toggleChat = () => {
-    if (isOpen && !isMinimized) {
-      setIsOpen(false);
-    } else if (isMinimized) {
+    if (isMinimized) {
+      // When minimized, close the chat completely
       setIsMinimized(false);
+      setIsOpen(false);
+    } else if (isOpen) {
+      // When open, close it
+      setIsOpen(false);
     } else {
-      // On mobile, reset minimize state when opening
+      // Open the chat
       if (isMobile) {
         setIsMinimized(false);
       }
@@ -110,7 +113,8 @@ return (
           </div>
         </div>
 
-        {/* BUTTONS */}
+        {/* BUTTONS - Hidden on mobile */}
+        {!isMobile && (
         <div className="chat-header-buttons" style={{ display: "flex", gap: "6px" }}>
 
           {/* MINIMIZE - On mobile, close the chat */}
@@ -136,6 +140,7 @@ return (
           </button>
 
         </div>
+        )}
       </div>
 
       {/* BODY */}
