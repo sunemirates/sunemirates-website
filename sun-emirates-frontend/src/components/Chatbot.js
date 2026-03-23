@@ -4,13 +4,45 @@ const Chatbot = () => {
 
 const [isOpen, setIsOpen] = useState(false);
 const [isMinimized, setIsMinimized] = useState(false);
+const [isMobile, setIsMobile] = useState(false);
 const [messages, setMessages] = useState([
   { id: 1, text: "Hello 👋 Welcome to Sun Emirates. How can I help you?", sender: "bot" }
 ]);
 const [input, setInput] = useState("");
 const chatBodyRef = useRef(null);
 
-const toggleChat = () => setIsOpen(!isOpen);
+// Mobile detection
+useEffect(() => {
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+  
+  checkMobile();
+  window.addEventListener('resize', checkMobile);
+  return () => window.removeEventListener('resize', checkMobile);
+}, []);
+
+// Auto-reset minimize state on mobile
+useEffect(() => {
+  if (isMobile && isOpen) {
+    setIsMinimized(false);
+  }
+}, [isMobile, isOpen]);
+
+// Handle toggle with mobile support
+  const toggleChat = () => {
+    if (isOpen && !isMinimized) {
+      setIsOpen(false);
+    } else if (isMinimized) {
+      setIsMinimized(false);
+    } else {
+      // On mobile, reset minimize state when opening
+      if (isMobile) {
+        setIsMinimized(false);
+      }
+      setIsOpen(true);
+    }
+  };
 
 const sendMessage = () => {
   if (!input.trim()) return;
@@ -81,15 +113,15 @@ return (
         {/* BUTTONS */}
         <div className="chat-header-buttons" style={{ display: "flex", gap: "6px" }}>
 
-          {/* MINIMIZE */}
-          <button className="chat-header-btn" onClick={() => setIsMinimized(true)}>
+          {/* MINIMIZE - On mobile, close the chat */}
+          <button className="chat-header-btn" onClick={() => isMobile ? setIsOpen(false) : setIsMinimized(true)}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
               <line x1="5" y1="12" x2="19" y2="12"/>
             </svg>
           </button>
 
-          {/* MAXIMIZE */}
-          <button className="chat-header-btn" onClick={() => setIsMinimized(false)}>
+          {/* MAXIMIZE - On mobile, just ensure chat is open */}
+          <button className="chat-header-btn" onClick={() => { setIsMinimized(false); setIsOpen(true); }}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
               <rect x="6" y="6" width="12" height="12"/>
             </svg>
