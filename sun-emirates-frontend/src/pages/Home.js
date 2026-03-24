@@ -146,7 +146,7 @@ function Home() {
               </Link>
             </div>
             <div className="about-image">
-              <img src="/images/Common/paintbooth.png" alt="Paint Booth" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+              <img src="/images/Common/homepage.jpeg" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
             </div>
           </div>
         </div>
