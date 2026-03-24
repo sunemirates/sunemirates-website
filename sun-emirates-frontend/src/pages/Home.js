@@ -145,12 +145,7 @@ function Home() {
                 Learn More About Us
               </Link>
             </div>
-            <div className="about-image">
-              <img 
-                src="/images/Common/Aboutsbnr.png" 
-                alt="Sun Emirates Workshop" 
-              />
-            </div>
+            <div className="about-image"></div>
           </div>
         </div>
       </section>

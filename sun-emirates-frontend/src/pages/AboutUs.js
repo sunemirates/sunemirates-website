@@ -5,22 +5,7 @@ const AboutUs = () => {
     {
       name: "Saminathan",
       position: "Managing Director",
-      image: null
-    },
-    {
-      name: "Ramesh Kumar",
-      position: "Production Manager",
-      image: null
-    },
-    {
-      name: "Ahmed Hassan",
-      position: "Quality Assurance Manager",
-      image: null
-    },
-    {
-      name: "Mohammed Ali",
-      position: "Operations Manager",
-      image: null
+      image: "/images/Common/saminathan-image.jpeg"
     }
   ];
 
@@ -71,12 +56,12 @@ const AboutUs = () => {
                 maintaining exceptional quality standards.
               </p>
             </div>
-            <div className="about-image">
-              <img 
-                src="/images/Common/Aboutsbnr.png" 
-                alt="Sun Emirates Workshop Facility" 
-              />
-            </div>
+          
+              
+                
+                
+              
+            
           </div>
         </div>
       </section>
@@ -178,12 +163,7 @@ const AboutUs = () => {
                 ))}
               </ul>
             </div>
-            <div className="about-image">
-              <img 
-                src="/images/MS/MachineBody.jpg" 
-                alt="Engineering Works" 
-              />
-            </div>
+            <div className="about-image"></div>
           </div>
         </div>
       </section>
@@ -225,7 +205,7 @@ const AboutUs = () => {
           </div>
           <div className="services-grid">
             <div className="service-card">
-              <h3>ISO 9001:2015</h3>
+              <h3>Quality Management System</h3>
               <p>
                 Quality Management System certified company ensuring consistent 
                 quality in all our fabrication processes and deliverables.

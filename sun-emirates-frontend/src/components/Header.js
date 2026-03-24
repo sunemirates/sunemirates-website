@@ -36,7 +36,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="logo">
             <img 
-              src="/images/Common/NewLogo.png" 
+              src="/images/Common/logo.jpeg" 
               alt="Sun Emirates" 
               title="Sun Emirates Mechanical Works LLC"
             />

@@ -140,15 +140,7 @@ const Equipments = () => {
                 category.items.map((item, itemIndex) => (
                   <div key={`${catIndex}-${itemIndex}`} className="equipment-card">
                     <div className="equipment-image">
-                      <img 
-                        src={`/images/MS/${item.name.split(' ')[0]}.jpg`} 
-                        alt={item.name}
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                          e.target.nextSibling.style.display = 'flex';
-                        }}
-                      />
-                      <div className="image-placeholder" style={{ display: 'none' }}>
+                      <div className="image-placeholder">
                         <span>Image Coming Soon</span>
                       </div>
                     </div>
