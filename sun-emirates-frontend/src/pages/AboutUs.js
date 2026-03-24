@@ -56,10 +56,11 @@ const AboutUs = () => {
                 maintaining exceptional quality standards.
               </p>
             </div>
-          
+            <div>
+           <img src="/images/Common/paintbooth.png" alt="Paint Booth" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
               
                 
-                
+               </div> 
               
             
           </div>
@@ -117,7 +118,7 @@ const AboutUs = () => {
           <div className="about-section">
             <div className="about-image">
               <img 
-                src="/images/MS/IndustrialSheds.jpg" 
+                src="/images/Common/workplace.png" 
                 alt="Workshop Facility" 
               />
             </div>

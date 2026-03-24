@@ -605,10 +605,45 @@ textarea {
 }
 
 /* ==================== EQUIPMENT SECTION ==================== */
+/* GRID */
 .equipment-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.equipment-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.equipment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.equipment-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.equipment-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TITLE */
+.equipment-title {
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
 }
 
 .equipment-card {
