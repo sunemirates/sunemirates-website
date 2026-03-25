@@ -14,6 +14,12 @@ export function middleware(req) {
 
   return new NextResponse('Auth required', {
     status: 401,
-    headers: { 'WWW-Authenticate': 'Basic realm="Secure Area"' },
+    headers: {
+      'WWW-Authenticate': 'Basic realm="Secure Area"',
+    },
   });
 }
+
+export const config = {
+  matcher: '/:path*',
+};
