@@ -3,7 +3,7 @@ import React from 'react';
 const AboutUs = () => {
   const teamMembers = [
     {
-      name: "Mr.Saminathan Subramani B.E.,",
+      name: "Mr.Saminathan Subramani",
       position: "Managing Director",
       image: "/images/Common/saminathan-image.jpeg"
     }

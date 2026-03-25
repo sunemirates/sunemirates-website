@@ -4,19 +4,9 @@ import Chatbot from "../components/Chatbot";
 
 const banners = [
   {
-    src: "/images/Banner/1.jpg",
+    src: "/images/Banner/homepage.jpeg",
     title: "Steel Fabrication Experts",
     subtitle: "Quality Structural Works for Industrial Projects"
-  },
-  {
-    src: "/images/Banner/2.jpg",
-    title: "Professional Engineering",
-    subtitle: "Precision Manufacturing & Fabrication"
-  },
-  {
-    src: "/images/Banner/3.jpg",
-    title: "Trusted EPC Partner",
-    subtitle: "Serving Leading Companies Across UAE"
   }
 ];
 
@@ -101,16 +91,27 @@ function Home() {
                 alt={banner.title}
                 loading={index === 0 ? "eager" : "lazy"}
               />
+
+              {/* ✅ FIXED CONTENT */}
               <div className="hero-content">
-                <h1>{banner.title}</h1>
-                <p>{banner.subtitle}</p>
-                <Link to="/contact" className="btn btn-primary">
-                  Get Quote
-                </Link>
+                <h1 style={{ display: 'none' }}>{banner.title}</h1>
+
+                <p className="hero-subtitle" style={{ display: 'none' }}>
+                  {banner.subtitle}
+                </p>
+
+                {/* 🔥 FIX: button properly placed */}
+                <div className="hero-btn-wrapper">
+                  <Link to="/contact" className="btn btn-primary">
+                    Get Quote
+                  </Link>
+                </div>
               </div>
+
             </div>
           ))}
         </div>
+
         <div className="hero-indicators">
           {banners.map((_, index) => (
             <button
@@ -146,7 +147,7 @@ function Home() {
               </Link>
             </div>
             <div className="about-image">
-              <img src="/images/Common/homepage.jpeg" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+              <img src="/images/Common/page.jpeg" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
             </div>
           </div>
         </div>
@@ -166,28 +167,27 @@ function Home() {
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="section">
+      {/* Our Core Services Section */}
+      <section className="section bg-light">
         <div className="container">
-          <div className="text-center mb-40">
-            <h2>Our Services</h2>
-            <p className="text-light">
-              Comprehensive fabrication solutions for industrial and commercial projects
-            </p>
-          </div>
-          <div className="services-grid">
-            {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-card-icon">{service.icon}</div>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-40">
-            <Link to="/services" className="btn btn-outline">
-              View All Services
-            </Link>
+          <div className="about-section">
+            <div className="about-content">
+              <h2>Our Core Services</h2>
+              <p className="text-light mb-20">
+                Comprehensive mechanical works and fabrication solutions tailored to industrial and commercial project requirements
+              </p>
+              <p>
+                Sun Emirates Mechanical Works LLC delivers high-quality fabrication, machining and laser cutting solutions. With a strong focus on precision, efficiency, and reliability, we support a wide range of industrial and commercial projects across the region.
+              </p>
+              <ul className="service-features">
+                <li>Skilled and experienced workshop team</li>
+                <li>Advanced machinery and fabrication capability</li>
+                <li>Strong focus on quality and timely delivery</li>
+              </ul>
+            </div>
+            <div className="about-image">
+              <img src="/images/Banner/ourservice.png" alt="Our Services" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+            </div>
           </div>
         </div>
       </section>

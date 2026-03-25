@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Layout from "./components/Layout";
@@ -33,25 +33,6 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import PageNotFound from "./pages/PageNotFound";
 
 function App() {
-  const [allowed, setAllowed] = useState(false);
-
-  useEffect(() => {
-    const password = prompt("Enter Password");
-
-    if (password === "cei@1230") {
-      setAllowed(true);
-    }
-  }, []);
-
-  // 🔒 Block access if password is wrong
-  if (!allowed) {
-    return (
-      <h1 style={{ textAlign: "center", marginTop: "50px" }}>
-        Access Denied ❌
-      </h1>
-    );
-  }
-
   return (
     <Routes>
 
