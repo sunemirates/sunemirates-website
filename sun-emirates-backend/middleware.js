@@ -1,16 +1,19 @@
 import { NextResponse } from 'next/server';
 
-export function middleware(request) {
-  const auth = request.headers.get('authorization');
+export function middleware(req) {
+  const basicAuth = req.headers.get('authorization');
 
-  if (auth !== 'Basic ' + Buffer.from('admin:1234').toString('base64')) {
-    return new Response('Auth required', {
-      status: 401,
-      headers: {
-        'WWW-Authenticate': 'Basic realm="Secure Area"',
-      },
-    });
+  if (basicAuth) {
+    const authValue = basicAuth.split(' ')[1];
+    const [user, pwd] = atob(authValue).split(':');
+
+    if (user === 'admin' && pwd === '1234') {
+      return NextResponse.next();
+    }
   }
 
-  return NextResponse.next();
+  return new NextResponse('Auth required', {
+    status: 401,
+    headers: { 'WWW-Authenticate': 'Basic realm="Secure Area"' },
+  });
 }
