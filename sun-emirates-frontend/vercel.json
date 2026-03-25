@@ -4,7 +4,6 @@
       "NODE_VERSION": "18"
     }
   },
-  "github": {
-    "silent": true
-  }
+  "outputDirectory": "build",
+  "framework": "create-react-app"
 }
