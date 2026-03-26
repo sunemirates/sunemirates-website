@@ -44,25 +44,28 @@ const AboutUs = () => {
                 we have built a reputation for delivering high-quality fabrication 
                 solutions to clients across various sectors.
               </p>
-              <p>
-                Our company specializes in stainless steel and mild steel fabrication 
-                for Construction, Interior Decoration, Marine, Power, and Oil & Gas 
-                sectors. We maintain the highest standards of quality and safety in 
-                all our operations.
-              </p>
-              <p>
-                We have a team of experienced engineers, technicians, and skilled 
-                workers who are committed to delivering projects on time while 
-                maintaining exceptional quality standards.
-              </p>
+
+              {/* ✅ UPDATED BULLET POINT CONTENT */}
+              <ul className="features-list">
+                <li>
+                  Specialized in stainless steel and mild steel fabrication for Construction, Interior Decoration, Marine, Power, and Oil & Gas sectors.
+                </li>
+                <li>
+                  We maintain the highest standards of quality and safety in all our operations.
+                </li>
+                <li>
+                  Our team of experienced engineers, technicians, and skilled workers ensures timely delivery with exceptional quality standards.
+                </li>
+              </ul>
+
             </div>
             <div>
-           <img src="/images/Common/paintbooth.png" alt="Paint Booth" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
-              
-                
-               </div> 
-              
-            
+              <img 
+                src="/images/Common/paintbooth.png" 
+                alt="Paint Booth" 
+                style={{ width: '100%', height: 'auto', borderRadius: '8px' }} 
+              />
+            </div> 
           </div>
         </div>
       </section>

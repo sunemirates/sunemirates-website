@@ -100,11 +100,42 @@ function Home() {
                   {banner.subtitle}
                 </p>
 
-                {/* 🔥 FIX: button properly placed */}
                 <div className="hero-btn-wrapper">
                   <Link to="/contact" className="btn btn-primary">
                     Get Quote
                   </Link>
+
+                 <div
+  style={{
+    textAlign: 'center',
+    marginTop: '20px',
+    fontFamily: "'Poppins', sans-serif",
+    color: '#ffffff',
+  }}
+>
+  <p
+    style={{
+      fontSize: '22px',
+      fontWeight: '600',
+      margin: '0',
+      letterSpacing: '0.6px',
+    }}
+  >
+    Engineering Excellence. Built to Precision.
+  </p>
+
+  <p
+    style={{
+      fontSize: '22px',
+      fontWeight: '600',
+      marginTop: '8px',
+      color: '#d1d5db',
+    }}
+  >
+    Delivering Quality Fabrication Solutions. Your Trusted Partner.
+  </p>
+</div>
+
                 </div>
               </div>
 

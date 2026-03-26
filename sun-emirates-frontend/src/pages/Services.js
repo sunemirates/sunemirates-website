@@ -8,7 +8,15 @@ const Services = () => {
     'Shuttering & Manholes',
     'Bending of Pipes',
     'Blasting and Painting',
-    'Onshore and offshore services'
+    'Onshore and offshore services',
+
+    // ✅ Added services
+    'Laser Cutting',
+    'Machining',
+    'Fabrication',
+    'Press Brake',
+    'Welding',
+    'Custom Engineering'
   ];
 
   return (
@@ -28,13 +36,16 @@ const Services = () => {
             <div className="titldv">
               We are specialized in the following services:
             </div>
+
+            {/* ✅ Same bullet style as About.js */}
             <div className="desdv">
-              <ul>
+              <ul className="features-list">
                 {services.map((service, index) => (
                   <li key={index}>{service}</li>
                 ))}
               </ul>
             </div>
+
           </div>
         </div>
       </section>

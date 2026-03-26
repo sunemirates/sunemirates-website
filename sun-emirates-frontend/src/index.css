@@ -631,6 +631,29 @@ textarea {
   margin-bottom: 20px;
 }
 
+.about-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.about-features li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.about-features li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-size: 20px;
+  line-height: 1;
+}
+
 .about-image {
   position: relative;
 }
