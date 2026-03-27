@@ -214,14 +214,14 @@ const Clients = () => {
             <div className="service-card">
               <h3>Quality Assurance</h3>
               <p>
-                ISO 9001:2015 certified company with rigorous quality control 
+                Quality mangement system certified company with rigorous quality control 
                 processes ensuring consistent excellence in every project.
               </p>
             </div>
             <div className="service-card">
               <h3>Technical Expertise</h3>
               <p>
-                Over 15 years of combined experience in steel fabrication with 
+                Over 19 years of combined experience in steel fabrication with 
                 skilled engineers and certified welders.
               </p>
             </div>
