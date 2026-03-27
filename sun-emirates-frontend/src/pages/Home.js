@@ -4,7 +4,7 @@ import Chatbot from "../components/Chatbot";
 
 const banners = [
   {
-    src: "/images/Banner/homepage.jpeg",
+    src: "/images/Banner/pagehome.png",
     title: "Steel Fabrication Experts",
     subtitle: "Quality Structural Works for Industrial Projects"
   }
@@ -78,82 +78,42 @@ function Home() {
 
   return (
     <div>
-      {/* Hero Banner */}
-      <section className="hero">
-        <div className="hero-slider">
-          {banners.map((banner, index) => (
-            <div 
-              key={index} 
-              className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
-            >
-              <img 
-                src={banner.src} 
-                alt={banner.title}
-                loading={index === 0 ? "eager" : "lazy"}
-              />
+    {/* HERO SECTION */}
+<section className="hero">
+  {banners.map((banner, index) => (
+    <div key={index} className="hero-slide active">
+      <img src={banner.src} alt="Hero Banner" />
 
-              {/* ✅ FIXED CONTENT */}
-              <div className="hero-content">
-                <h1 style={{ display: 'none' }}>{banner.title}</h1>
+      <div className="hero-content">
+        
 
-                <p className="hero-subtitle" style={{ display: 'none' }}>
-                  {banner.subtitle}
-                </p>
+        <h1>
+          Engineering Excellence.
+        </h1>
+        <h1>
+          Built to Precision.
+        </h1>
 
-                <div className="hero-btn-wrapper">
-                  <Link to="/contact" className="btn btn-primary">
-                    Get Quote
-                  </Link>
+        <p className="hero-sub">
+          Delivering Quality Fabrication Solutions.
+        </p>
+        <p className="hero-sub">
+          Your Trusted Partner.
+        </p>
 
-                 <div
-  style={{
-    textAlign: 'center',
-    marginTop: '20px',
-    fontFamily: "'Poppins', sans-serif",
-    color: '#ffffff',
-  }}
->
-  <p
-    style={{
-      fontSize: '22px',
-      fontWeight: '600',
-      margin: '0',
-      letterSpacing: '0.6px',
-    }}
-  >
-    Engineering Excellence. Built to Precision.
-  </p>
+        <div className="hero-buttons">
+          <Link to="/contact" className="btn btn-primary">
+            Request Quote
+          </Link>
 
-  <p
-    style={{
-      fontSize: '22px',
-      fontWeight: '600',
-      marginTop: '8px',
-      color: '#d1d5db',
-    }}
-  >
-    Delivering Quality Fabrication Solutions. Your Trusted Partner.
-  </p>
-</div>
-
-                </div>
-              </div>
-
-            </div>
-          ))}
+          <Link to="/services" className="btn btn-light">
+            Explore Services
+          </Link>
         </div>
-
-        <div className="hero-indicators">
-          {banners.map((_, index) => (
-            <button
-              key={index}
-              className={index === currentSlide ? 'active' : ''}
-              onClick={() => setCurrentSlide(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-      </section>
+      </div>
+    </div>
+  ))}
+</section>
 
       {/* Company Introduction */}
       <section className="section">
@@ -178,7 +138,7 @@ function Home() {
               </Link>
             </div>
             <div className="about-image">
-              <img src="/images/Common/page.jpeg" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+              <img src="/images/Common/page.png" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
             </div>
           </div>
         </div>

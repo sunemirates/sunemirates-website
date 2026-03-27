@@ -16,52 +16,36 @@ const Header = () => {
 
   return (
     <header className="header">
-      {/* Top Bar */}
-      <div className="header-top">
-        <div className="container">
-          <div className="header-contact">
-            <a href="tel:+97167481646">
-              <span>☎</span> +971-6-7481646
-            </a>
-            <a href="mailto:sales@sunemirates.com">
-              <span>✉</span> sales@sunemirates.com
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Header */}
       <div className="header-main">
         <div className="container">
-          {/* Logo */}
+
+          {/* LOGO */}
           <Link to="/" className="logo">
-            <img 
-              src="/images/Common/logo.jpeg" 
-              alt="Sun Emirates" 
-              title="Sun Emirates Mechanical Works LLC"
-            />
-            <div className="logo-text">
-              Sun <span>Emirates</span>
+            <div>
+              <h1 className="logo-title">SUN EMIRATES</h1>
+              <p className="logo-subtitle">MECHANICAL WORKS L.L.C.</p>
             </div>
           </Link>
 
-          {/* Navigation */}
+          {/* NAV */}
           <nav className="main-nav">
-            <ul>
+            <ul className={mobileMenuOpen ? "open" : ""}>
               {navLinks.map((link) => (
                 <li key={link.path}>
-                  <NavLink 
+                  <NavLink
                     to={link.path}
-                    className={({ isActive }) => isActive ? "active" : ""}
+                    className={({ isActive }) =>
+                      isActive ? "active" : ""
+                    }
                   >
                     {link.label}
                   </NavLink>
                 </li>
               ))}
             </ul>
-            
-            {/* Mobile Menu Toggle */}
-            <div 
+
+            {/* MOBILE */}
+            <div
               className="mobile-menu-toggle"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
@@ -70,6 +54,7 @@ const Header = () => {
               <span></span>
             </div>
           </nav>
+
         </div>
       </div>
     </header>

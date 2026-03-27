@@ -140,12 +140,12 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--color-accent);
+  background-color: #000080;
   color: var(--color-primary);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-secondary-dark);
+  background-color: #000066;
   color: var(--color-primary);
 }
 
@@ -231,48 +231,27 @@ textarea {
 }
 
 /* ==================== HEADER STYLES ==================== */
+/* ==================== MODERN HERO NAVBAR ==================== */
+
 .header {
-  background-color: var(--color-primary);
-  border-bottom: 3px solid var(--color-secondary-dark);
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: transparent;
+  border: none;
 }
 
+/* REMOVE TOP BAR (optional - design doesn’t have it) */
 .header-top {
-  background-color: var(--color-secondary-dark);
-  padding: 8px 0;
+  display: none;
 }
 
-.header-top .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-main {
-  background-color: var(--color-primary);
-  padding: 20px 0;
-}
-
-.header-contact {
-  display: flex;
-  gap: 30px;
-  color: var(--color-primary);
-  font-size: 14px;
-}
-
-.header-contact a {
-  color: var(--color-primary);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.header-contact a:hover {
-  color: var(--color-accent);
-}
-
+/* MAIN HEADER */
 .header-main {
   padding: 20px 0;
+  background: transparent;
 }
 
 .header-main .container {
@@ -281,29 +260,33 @@ textarea {
   align-items: center;
 }
 
+/* LOGO */
 .logo {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .logo img {
-  height: 60px;
-  width: auto;
+  height: 55px;
 }
 
 .logo-text {
   font-family: var(--font-heading);
   font-size: 20px;
   font-weight: 700;
-  color: var(--color-secondary-dark);
+  color: #000000;
   text-transform: uppercase;
 }
 
 .logo-text span {
-  color: var(--color-accent);
+  color: #000000;
+  font-weight: 400;
+  font-size: 12px;
+  display: block;
 }
 
+/* NAVIGATION */
 .main-nav {
   display: flex;
   align-items: center;
@@ -318,14 +301,16 @@ textarea {
 .main-nav a {
   font-family: var(--font-heading);
   font-size: 14px;
-  font-weight: 600;
-  color: var(--color-secondary-dark);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-weight: 500;
+  color: #000000;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
   padding: 10px 0;
   position: relative;
+  text-decoration: none;
 }
 
+/* ACTIVE / HOVER */
 .main-nav a::after {
   content: '';
   position: absolute;
@@ -333,19 +318,141 @@ textarea {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--color-accent);
+  background-color: #000000;
   transition: width 0.3s ease;
 }
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: var(--color-accent);
+  color: #000000;
 }
 
 .main-nav a:hover::after,
 .main-nav a.active::after {
   width: 100%;
 }
+
+/* White navbar only on home page (when hero section exists) */
+:root:has(.hero) .main-nav a {
+  color: #ffffff;
+}
+
+:root:has(.hero) .main-nav a::after {
+  background-color: #ffffff;
+}
+
+:root:has(.hero) .main-nav a:hover,
+:root:has(.hero) .main-nav a.active {
+  color: #ffffff;
+}
+
+:root:has(.hero) .logo-text {
+  color: #ffffff;
+}
+
+:root:has(.hero) .logo-text span {
+  color: #ffffff;
+}
+
+:root:has(.hero) .logo-title {
+  color: #ffffff;
+}
+
+:root:has(.hero) .logo-subtitle {
+  color: #cbd5f5;
+}
+
+/* SEARCH ICON */
+.nav-search {
+  color: #ffffff;
+  font-size: 18px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+/* ==================== MOBILE RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    background: rgba(8, 8, 8, 0.9);
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .main-nav ul.open {
+    display: flex;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ==================== LOGO TEXT DESIGN ==================== */
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* MAIN TITLE */
+.logo-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 2px;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* SUBTITLE */
+.logo-subtitle {
+  font-size: 11px;
+  color: #000000;
+  letter-spacing: 3px;
+  margin: 0;
+  margin-top: 2px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+
 
 /* Mobile Navigation */
 .mobile-menu-toggle {
@@ -475,30 +582,83 @@ textarea {
   opacity: 1;
 }
 
+/* ==================== HERO SECTION (FINAL FULL SCREEN) ==================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* FULL SCREEN */
+  overflow: hidden;
+}
+
+/* SLIDER */
+.hero-slider {
+  height: 100%;
+  position: relative;
+}
+
+/* SLIDE */
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+/* IMAGE */
 .hero-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* IMPORTANT */
   position: absolute;
   top: 0;
   left: 0;
 }
 
+/* DARK OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* DARK EFFECT */
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* CONTENT */
 .hero-content {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
+  padding: 0 20px;
+  z-index: 2;
 }
 
-.hero-subtitle {
-  margin-bottom: 10px;
+/* TITLE */
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
+/* SUBTEXT */
+.hero-content p {
+  font-size: 18px;
+  color: #dddddd;
+  margin-bottom: 25px;
+}
+
+/* CTA TEXT */
 .hero-cta-text {
   font-size: 20px;
   margin-bottom: 10px;
@@ -506,51 +666,94 @@ textarea {
 
 .hero-cta-text-secondary {
   font-size: 16px;
-  margin-bottom: 20px;
   color: #cccccc;
+  margin-bottom: 20px;
 }
 
+/* BUTTONS */
 .hero-btn-wrapper {
-  margin-top: 200px;
+  margin-top: 20px; /* FIXED */
 }
 
-.hero-content h1 {
-  color: var(--color-primary);
-  font-size: 42px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.hero-content p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #cccccc;
-}
-
-.hero-cta-text {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
+/* INDICATORS */
 .hero-indicators {
   display: none;
 }
+/* ================= HERO NEW ================= */
 
-.hero-indicators button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid var(--color-primary);
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.hero-indicators button.active {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
+.hero-slide img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
 }
 
+/* DARK OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+  z-index: 1;
+}
+
+/* CONTENT LEFT */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #fff;
+  max-width: 600px;
+}
+
+/* SMALL TOP BUTTON TEXT */
+.hero-top-btn {
+  background: var(--color-accent);
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* HEADING */
+.hero-content h1 {
+  font-size: 48px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* SUBTEXT */
+.hero-sub {
+  font-size: 18px;
+  color: #d1d5db;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-light {
+  background: #fff;
+  color: #000;
+}
+
+.btn-light:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
 /* ==================== SERVICES SECTION ==================== */
 .services-grid {
   display: grid;
@@ -2073,4 +2276,8 @@ textarea {
     padding: 8px 16px;
     font-size: 11px;
   }
+}
+/* HOME PAGE ONLY - NAV TEXT WHITE */
+.home-page .main-nav a {
+  color: #ffffff;
 }
