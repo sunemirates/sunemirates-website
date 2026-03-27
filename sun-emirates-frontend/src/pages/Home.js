@@ -95,7 +95,7 @@ function Home() {
         </h1>
 
         <p className="hero-sub">
-          Delivering Quality Fabrication Solutions.
+         Delivering Quality Fabrication Solutions.
         </p>
         <p className="hero-sub">
           Your Trusted Partner.
