@@ -121,7 +121,7 @@ const AboutUs = () => {
           <div className="about-section">
             <div className="about-image">
               <img 
-                src="/images/Common/workplace.png" 
+                src="/images/Common/page.png" 
                 alt="Workshop Facility" 
               />
             </div>
