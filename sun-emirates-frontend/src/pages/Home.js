@@ -89,39 +89,55 @@ function Home() {
 {/* SERVICES BAR */}
 <section className="services-bar">
   <div className="services-bar-container">
-    <div className="service-item">Laser Cutting</div>
-    <div className="service-item">Machining</div>
-    <div className="service-item">Fabrication</div>
-    <div className="service-item">Welding</div>
-    <div className="service-item">Sheet Metal</div>
-    <div className="service-item">Engineering</div>
+    <div className="service-item">
+      <span className="service-icon">✂️</span>
+      <span>Laser Cutting</span>
+    </div>
+    <div className="service-item">
+      <span className="service-icon">⚙️</span>
+      <span>Machining</span>
+    </div>
+    <div className="service-item">
+      <span className="service-icon">🔩</span>
+      <span>Fabrication</span>
+    </div>
+    <div className="service-item">
+      <span className="service-icon">🔥</span>
+      <span>Welding</span>
+    </div>
+    <div className="service-item">
+      <span className="service-icon">📐</span>
+      <span>Sheet Metal</span>
+    </div>
+    <div className="service-item">
+      <span className="service-icon">🛠️</span>
+      <span>Engineering</span>
+    </div>
   </div>
 </section>
 
-      {/* Company Introduction */}
-      <section className="section">
+      {/* About Section */}
+      <section className="about-section-modern">
         <div className="container">
-          <div className="about-section">
-            <div className="about-content">
-              <h2>Sun Emirates Mechanical Works LLC</h2>
+          <div className="about-grid">
+            <div className="about-text">
+              <h2>Reliable Mechanical Works & Fabrication Solutions</h2>
               <p>
-                We are a leading steel fabrication company located in Al Shenaya 
-                New Industrial Area, Ajman, U.A.E., established in 2007. With over 
-                19 years of experience, we specialize in stainless steel and mild 
-                steel fabrication for construction, interior decoration, marine, 
-                power, and oil & gas sectors.
+                Sun Emirates Mechanical Works LLC is a trusted name in steel fabrication, 
+                delivering precision-engineered solutions for construction, marine, oil & gas, 
+                and industrial sectors across the UAE since 2007.
               </p>
               <p>
-                Our experienced technical team is committed to delivering products 
-                on time with the highest quality standards, meeting client 
-                specifications and requirements.
+                Our state-of-the-art facility in Ajman is equipped with advanced machinery 
+                and staffed by experienced professionals committed to quality, safety, and 
+                timely project delivery.
               </p>
               <Link to="/about" className="btn btn-secondary">
                 Learn More About Us
               </Link>
             </div>
-            <div className="about-image">
-              <img src="/images/Common/page.png" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+            <div className="about-image-wrapper">
+              <img src="/images/Common/page.png" alt="Sun Emirates Facility" className="about-img" />
             </div>
           </div>
         </div>
@@ -142,25 +158,44 @@ function Home() {
       </section>
 
       {/* Our Core Services Section */}
-      <section className="section bg-light">
+      <section className="services-section">
         <div className="container">
-          <div className="about-section">
-            <div className="about-content">
-              <h2>Our Core Services</h2>
-              <p className="text-light mb-20">
-                Comprehensive mechanical works and fabrication solutions tailored to industrial and commercial project requirements
-              </p>
-              <p>
-                Sun Emirates Mechanical Works LLC delivers high-quality fabrication, machining and laser cutting solutions. With a strong focus on precision, efficiency, and reliability, we support a wide range of industrial and commercial projects across the region.
-              </p>
-              <ul className="service-features">
-                <li>Skilled and experienced workshop team</li>
-                <li>Advanced machinery and fabrication capability</li>
-                <li>Strong focus on quality and timely delivery</li>
-              </ul>
+          <div className="text-center mb-40">
+            <h2>Our Core Services</h2>
+            <p className="text-light">
+              Comprehensive mechanical works and fabrication solutions tailored to industrial and commercial project requirements
+            </p>
+          </div>
+          <div className="services-card-grid">
+            <div className="service-card-item">
+              <div className="service-card-icon">⚙️</div>
+              <h3>Steel Fabrication</h3>
+              <p>Custom steel fabrication for structural, architectural, and industrial applications with precision engineering.</p>
             </div>
-            <div className="about-image">
-              <img src="/images/Banner/ourservice.png" alt="Our Services" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+            <div className="service-card-item">
+              <div className="service-card-icon">🏗️</div>
+              <h3>Structural Works</h3>
+              <p>Complete structural steel solutions including beams, columns, trusses, and complex metal structures.</p>
+            </div>
+            <div className="service-card-item">
+              <div className="service-card-icon">🔧</div>
+              <h3>Pipe Fabrication</h3>
+              <p>Professional pipe fabrication and piping systems for oil, gas, water, and industrial applications.</p>
+            </div>
+            <div className="service-card-item">
+              <div className="service-card-icon">🔥</div>
+              <h3>Welding Works</h3>
+              <p>Certified welding services including MIG, TIG, ARC, and submerged arc welding for various metals.</p>
+            </div>
+            <div className="service-card-item">
+              <div className="service-card-icon">🛡️</div>
+              <h3>Surface Treatment</h3>
+              <p>Comprehensive surface treatment including sand blasting, shot blasting, and protective coatings.</p>
+            </div>
+            <div className="service-card-item">
+              <div className="service-card-icon">✂️</div>
+              <h3>Laser Cutting</h3>
+              <p>High-precision laser cutting services for sheet metal, providing clean edges and intricate designs.</p>
             </div>
           </div>
         </div>
