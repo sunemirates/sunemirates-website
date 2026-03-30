@@ -705,16 +705,29 @@ textarea {
   padding: 80px 0;
 }
 
+.services-section .text-center h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.services-section .text-center .text-light {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
 .services-card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 25px;
 }
 
 .service-card-item {
   background: #ffffff;
   border-radius: 12px;
-  padding: 30px;
+  padding: 22px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
@@ -725,21 +738,22 @@ textarea {
 }
 
 .service-card-icon {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  color: #111827;
+  margin-bottom: 16px;
 }
 
 .service-card-item h3 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   color: #111827;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .service-card-item p {
-  font-size: 14px;
+  font-size: 13px;
   color: #6b7280;
-  line-height: 1.7;
+  line-height: 1.6;
   margin: 0;
 }
 

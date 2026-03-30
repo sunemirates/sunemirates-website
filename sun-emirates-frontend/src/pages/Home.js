@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaCut, FaCogs, FaIndustry, FaTools, FaFire, FaDraftingCompass } from "react-icons/fa";
 import Chatbot from "../components/Chatbot";
 
 const clients = [
@@ -163,39 +164,39 @@ function Home() {
           <div className="text-center mb-40">
             <h2>Our Core Services</h2>
             <p className="text-light">
-              Comprehensive mechanical works and fabrication solutions tailored to industrial and commercial project requirements
+              Comprehensive mechanical and fabrication solutions tailored to your requirements.
             </p>
           </div>
           <div className="services-card-grid">
             <div className="service-card-item">
-              <div className="service-card-icon">⚙️</div>
-              <h3>Steel Fabrication</h3>
-              <p>Custom steel fabrication for structural, architectural, and industrial applications with precision engineering.</p>
-            </div>
-            <div className="service-card-item">
-              <div className="service-card-icon">🏗️</div>
-              <h3>Structural Works</h3>
-              <p>Complete structural steel solutions including beams, columns, trusses, and complex metal structures.</p>
-            </div>
-            <div className="service-card-item">
-              <div className="service-card-icon">🔧</div>
-              <h3>Pipe Fabrication</h3>
-              <p>Professional pipe fabrication and piping systems for oil, gas, water, and industrial applications.</p>
-            </div>
-            <div className="service-card-item">
-              <div className="service-card-icon">🔥</div>
-              <h3>Welding Works</h3>
-              <p>Certified welding services including MIG, TIG, ARC, and submerged arc welding for various metals.</p>
-            </div>
-            <div className="service-card-item">
-              <div className="service-card-icon">🛡️</div>
-              <h3>Surface Treatment</h3>
-              <p>Comprehensive surface treatment including sand blasting, shot blasting, and protective coatings.</p>
-            </div>
-            <div className="service-card-item">
-              <div className="service-card-icon">✂️</div>
+              <div className="service-card-icon"><FaCut /></div>
               <h3>Laser Cutting</h3>
-              <p>High-precision laser cutting services for sheet metal, providing clean edges and intricate designs.</p>
+              <p>High-precision cutting solutions</p>
+            </div>
+            <div className="service-card-item">
+              <div className="service-card-icon"><FaCogs /></div>
+              <h3>Machining</h3>
+              <p>Accurate machinery and fabrication capability</p>
+            </div>
+            <div className="service-card-item">
+              <div className="service-card-icon"><FaIndustry /></div>
+              <h3>Fabrication</h3>
+              <p>Custom metal fabrication for every need</p>
+            </div>
+            <div className="service-card-item">
+              <div className="service-card-icon"><FaTools /></div>
+              <h3>Press Brake Works</h3>
+              <p>Precision bending solutions</p>
+            </div>
+            <div className="service-card-item">
+              <div className="service-card-icon"><FaFire /></div>
+              <h3>Welding Services</h3>
+              <p>Reliable welding applications</p>
+            </div>
+            <div className="service-card-item">
+              <div className="service-card-icon"><FaDraftingCompass /></div>
+              <h3>Engineering Solutions</h3>
+              <p>Custom project support</p>
             </div>
           </div>
         </div>
