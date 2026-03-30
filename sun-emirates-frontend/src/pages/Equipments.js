@@ -30,7 +30,8 @@ const Equipments = () => {
     { image: "/images/cardview/lathe machine.jpeg", title: "Center Lathe Machine" },
     { image: "/images/cardview/bending machine.jpg", title: "Pipe Bending Machine" },
     { image: "/images/cardview/drilling machine.jpeg", title: "Radial Drilling Machine" },
-    { image: "/images/cardview/laser cutting machine.jpg", title: "Laser Cutting Machine" }
+    { image: "/images/cardview/laser cutting machine.jpg", title: "Laser Cutting Machine" },
+    { image: "/images/Common/paintbooth.png", title: "Paint Booth" }
   ];
 
   return (

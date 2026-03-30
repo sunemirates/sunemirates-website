@@ -61,7 +61,7 @@ const AboutUs = () => {
             </div>
             <div>
               <img 
-                src="/images/Common/paintbooth.png" 
+                src="/images/Common/page.png" 
                 alt="Paint Booth" 
                 style={{ width: '100%', height: 'auto', borderRadius: '8px' }} 
               />
