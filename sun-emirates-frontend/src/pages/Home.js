@@ -91,7 +91,8 @@ function Home() {
 <section className="services-bar">
   <div className="services-bar-container">
     <div className="service-item">
-      <span className="service-icon">✂️</span>
+      <span className="service-icon">⚙️
+</span>
       <span>Laser Cutting</span>
     </div>
     <div className="service-item">
@@ -99,19 +100,23 @@ function Home() {
       <span>Machining</span>
     </div>
     <div className="service-item">
-      <span className="service-icon">🔩</span>
+      <span className="service-icon">⚙️
+</span>
       <span>Fabrication</span>
     </div>
     <div className="service-item">
-      <span className="service-icon">🔥</span>
+      <span className="service-icon">⚙️
+</span>
       <span>Welding</span>
     </div>
     <div className="service-item">
-      <span className="service-icon">📐</span>
+      <span className="service-icon">⚙️
+</span>
       <span>Sheet Metal</span>
     </div>
     <div className="service-item">
-      <span className="service-icon">🛠️</span>
+      <span className="service-icon">⚙️
+</span>
       <span>Engineering</span>
     </div>
   </div>
