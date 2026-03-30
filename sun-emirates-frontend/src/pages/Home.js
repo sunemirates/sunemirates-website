@@ -1,14 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Chatbot from "../components/Chatbot";
-
-const banners = [
-  {
-    src: "/images/Banner/pagehome.png",
-    title: "Steel Fabrication Experts",
-    subtitle: "Quality Structural Works for Industrial Projects"
-  }
-];
 
 const clients = [
   { src: "/images/Clients/Clients1.png", alt: "KHANSAHEB" },
@@ -67,52 +59,43 @@ const stats = [
 ];
 
 function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % banners.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div>
     {/* HERO SECTION */}
-<section className="hero">
-  {banners.map((banner, index) => (
-    <div key={index} className="hero-slide active">
-      <img src={banner.src} alt="Hero Banner" />
+<section className="hero" style={{ backgroundImage: 'url(/images/Banner/pagehome.png)' }}>
+  <div className="hero-overlay"></div>
+  <div className="hero-content">
+    <h1>Engineering Excellence.</h1>
+    <h1>Built to Precision.</h1>
 
-      <div className="hero-content">
-        
+    <p className="hero-sub">
+      Delivering Quality Fabrication Solutions.
+    </p>
+    <p className="hero-sub">
+      Your Trusted Partner.
+    </p>
 
-        <h1>
-          Engineering Excellence.
-        </h1>
-        <h1>
-          Built to Precision.
-        </h1>
-
-        <p className="hero-sub">
-         Delivering Quality Fabrication Solutions.
-        </p>
-        <p className="hero-sub">
-          Your Trusted Partner.
-        </p>
-
-        <div className="hero-buttons">
-          <Link to="/contact" className="btn btn-primary">
-            Request Quote
-          </Link>
-
-          <Link to="/services" className="btn btn-light">
-            Explore Services
-          </Link>
-        </div>
-      </div>
+    <div className="hero-buttons">
+      <Link to="/contact" className="btn btn-primary">
+        Request Quote
+      </Link>
+      <Link to="/services" className="btn btn-light">
+        Explore Services
+      </Link>
     </div>
-  ))}
+  </div>
+</section>
+
+{/* SERVICES BAR */}
+<section className="services-bar">
+  <div className="services-bar-container">
+    <div className="service-item">Laser Cutting</div>
+    <div className="service-item">Machining</div>
+    <div className="service-item">Fabrication</div>
+    <div className="service-item">Welding</div>
+    <div className="service-item">Sheet Metal</div>
+    <div className="service-item">Engineering</div>
+  </div>
 </section>
 
       {/* Company Introduction */}

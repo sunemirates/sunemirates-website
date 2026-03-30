@@ -560,168 +560,34 @@ textarea {
 /* ==================== HERO SECTION ==================== */
 .hero {
   position: relative;
-  height: 500px;
-  background-color: #000000;
-  overflow: hidden;
-}
-
-.hero-slider {
-  height: 100%;
-  position: relative;
-}
-
-.hero-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-}
-
-.hero-slide.active {
-  opacity: 1;
-}
-
-/* ==================== HERO SECTION (FINAL FULL SCREEN) ==================== */
-
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* FULL SCREEN */
-  overflow: hidden;
-}
-
-/* SLIDER */
-.hero-slider {
-  height: 100%;
-  position: relative;
-}
-
-/* SLIDE */
-.hero-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-}
-
-/* IMAGE */
-.hero-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* IMPORTANT */
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* DARK OVERLAY */
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5); /* DARK EFFECT */
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-/* CONTENT */
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 80px;
-  transform: translateY(-50%);
-  text-align: left;
-  color: #fff;
-  max-width: 650px;
-  z-index: 2;
-}
-
-/* TITLE */
-.hero-content h1 {
-  font-size: 48px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-/* SUBTEXT */
-.hero-content p {
-  font-size: 18px;
-  color: #dddddd;
-  margin-bottom: 25px;
-}
-
-/* CTA TEXT */
-.hero-cta-text {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.hero-cta-text-secondary {
-  font-size: 16px;
-  color: #cccccc;
-  margin-bottom: 20px;
-}
-
-/* BUTTONS */
-.hero-btn-wrapper {
-  margin-top: 20px; /* FIXED */
-}
-
-/* INDICATORS */
-.hero-indicators {
-  display: none;
-}
-/* ================= HERO NEW ================= */
-
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.hero-slide img {
   width: 100%;
   height: 100vh;
-  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* DARK OVERLAY */
-.hero::before {
-  content: "";
+/* DARK BLUE OVERLAY */
+.hero-overlay {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.25));
+  background: linear-gradient(135deg, rgba(0, 30, 60, 0.85), rgba(0, 30, 60, 0.6));
   z-index: 1;
 }
 
 /* CONTENT LEFT */
 .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 80px;
-  transform: translateY(-50%);
-  text-align: left;
+  position: relative;
   z-index: 2;
-  color: #fff;
+  margin-left: 5%;
   max-width: 650px;
-}
-
-/* SMALL TOP BUTTON TEXT */
-.hero-top-btn {
-  background: var(--color-accent);
-  display: inline-block;
-  padding: 10px 18px;
-  font-size: 12px;
-  margin-bottom: 20px;
-  font-weight: 600;
+  color: #fff;
 }
 
 /* HEADING */
@@ -736,17 +602,50 @@ textarea {
 /* SUBTEXT */
 .hero-sub {
   font-size: 16px;
-  color: rgba(255,255,255,0.75);
-  line-height: 2.0 ;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.8;
   margin-bottom: 0;
 }
 
 /* BUTTONS */
 .hero-buttons {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 30px;
+}
+
+/* ==================== SERVICES BAR ==================== */
+.services-bar {
+  background: #0a1628;
+  padding: 20px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.services-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.service-item {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .btn-light {
@@ -1465,11 +1364,34 @@ textarea {
   }
   
   .hero {
-    height: 400px;
+    height: 500px;
+  }
+  
+  .hero-content {
+    margin-left: 20px;
+    max-width: 90%;
   }
   
   .hero-content h1 {
     font-size: 28px;
+  }
+  
+  .hero-sub {
+    font-size: 14px;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .services-bar-container {
+    gap: 20px;
+  }
+  
+  .service-item {
+    font-size: 12px;
+    padding: 6px 12px;
   }
   
   .footer-grid {
