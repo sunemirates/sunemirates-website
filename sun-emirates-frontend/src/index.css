@@ -757,6 +757,69 @@ textarea {
   margin: 0;
 }
 
+/* ==================== EQUIPMENT CAPABILITY SECTION ==================== */
+.equipment-capability-section {
+  background: #f9fafb;
+  padding: 80px 0;
+}
+
+.equipment-capability-section .text-center h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.equipment-capability-section .text-center .text-light {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+.equipment-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.equipment-capability-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.equipment-capability-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.equipment-capability-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.equipment-capability-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.equipment-capability-icon {
+  font-size: 18px;
+  color: #111827;
+}
+
+.equipment-capability-info span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
 .btn-light {
   background: #fff;
   color: #2b2b2b;
@@ -1462,7 +1525,8 @@ textarea {
   .equipment-grid,
   .clients-grid,
   .gallery-grid,
-  .stats-grid {
+  .stats-grid,
+  .equipment-capability-grid {
     grid-template-columns: 1fr;
   }
   

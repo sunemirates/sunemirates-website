@@ -202,6 +202,48 @@ function Home() {
         </div>
       </section>
 
+      {/* Our Equipment & Workshop Capability Section */}
+      <section className="equipment-capability-section">
+        <div className="container">
+          <div className="text-center mb-40">
+            <h2>Our Equipment & Workshop Capability</h2>
+            <p className="text-light">
+              Equipped with modern machinery to deliver precision and efficiency.
+            </p>
+          </div>
+          <div className="equipment-capability-grid">
+            <div className="equipment-capability-card">
+              <img src="/images/Common/page.png" alt="Laser Cutting Machine" className="equipment-capability-img" />
+              <div className="equipment-capability-info">
+                <FaCut className="equipment-capability-icon" />
+                <span>Laser Cutting Machine</span>
+              </div>
+            </div>
+            <div className="equipment-capability-card">
+              <img src="/images/Common/page.png" alt="CNC / Milling Machine" className="equipment-capability-img" />
+              <div className="equipment-capability-info">
+                <FaCogs className="equipment-capability-icon" />
+                <span>CNC / Milling Machine</span>
+              </div>
+            </div>
+            <div className="equipment-capability-card">
+              <img src="/images/Common/page.png" alt="Press Brake Machine" className="equipment-capability-img" />
+              <div className="equipment-capability-info">
+                <FaTools className="equipment-capability-icon" />
+                <span>Press Brake Machine</span>
+              </div>
+            </div>
+            <div className="equipment-capability-card">
+              <img src="/images/Common/page.png" alt="Welding Units" className="equipment-capability-img" />
+              <div className="equipment-capability-info">
+                <FaFire className="equipment-capability-icon" />
+                <span>Welding Units</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Equipment Preview */}
       <section className="section bg-light">
         <div className="container">
