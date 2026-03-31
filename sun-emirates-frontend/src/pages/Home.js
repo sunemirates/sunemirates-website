@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaCut, FaCogs, FaIndustry, FaTools, FaFire, FaDraftingCompass } from "react-icons/fa";
+import { FaCogs, FaIndustry, FaTools, FaDraftingCompass } from "react-icons/fa";
+import { GiLaserPrecision, GiTorch } from "react-icons/gi";
 import Chatbot from "../components/Chatbot";
 
 const clients = [
@@ -38,7 +39,7 @@ const services = [
   {
     title: "Welding Works",
     description: "Certified welding services including MIG, TIG, ARC, and submerged arc welding for various metals.",
-    icon: "🔥"
+    icon: "⚙"
   },
   {
     title: "Surface Treatment",
@@ -49,6 +50,39 @@ const services = [
     title: "Machine Shop",
     description: "Full machine shop capabilities for precision machining, drilling, cutting, and custom fabrication.",
     icon: "⚙"
+  }
+];
+
+const coreServices = [
+  {
+    title: "Laser Cutting",
+    description: "High-precision cutting solutions",
+    icon: GiLaserPrecision
+  },
+  {
+    title: "Machining",
+    description: "Accurate machinery and fabrication capability",
+    icon: FaCogs
+  },
+  {
+    title: "Fabrication",
+    description: "Custom metal fabrication for every need",
+    icon: FaIndustry
+  },
+  {
+    title: "Press Brake Works",
+    description: "Precision bending solutions",
+    icon: FaTools
+  },
+  {
+    title: "Welding Services",
+    description: "Reliable welding applications",
+    icon: GiTorch
+  },
+  {
+    title: "Engineering Solutions",
+    description: "Custom project support",
+    icon: FaDraftingCompass
   }
 ];
 
@@ -173,36 +207,15 @@ function Home() {
             </p>
           </div>
           <div className="services-card-grid">
-            <div className="service-card-item">
-              <div className="service-card-icon"><FaCut /></div>
-              <h3>Laser Cutting</h3>
-              <p>High-precision cutting solutions</p>
-            </div>
-            <div className="service-card-item">
-              <div className="service-card-icon"><FaCogs /></div>
-              <h3>Machining</h3>
-              <p>Accurate machinery and fabrication capability</p>
-            </div>
-            <div className="service-card-item">
-              <div className="service-card-icon"><FaIndustry /></div>
-              <h3>Fabrication</h3>
-              <p>Custom metal fabrication for every need</p>
-            </div>
-            <div className="service-card-item">
-              <div className="service-card-icon"><FaTools /></div>
-              <h3>Press Brake Works</h3>
-              <p>Precision bending solutions</p>
-            </div>
-            <div className="service-card-item">
-              <div className="service-card-icon"><FaFire /></div>
-              <h3>Welding Services</h3>
-              <p>Reliable welding applications</p>
-            </div>
-            <div className="service-card-item">
-              <div className="service-card-icon"><FaDraftingCompass /></div>
-              <h3>Engineering Solutions</h3>
-              <p>Custom project support</p>
-            </div>
+            {coreServices.map((service, index) => (
+              <div key={index} className="service-card-item">
+                <div className="service-card-icon">
+                  <service.icon />
+                </div>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -220,7 +233,7 @@ function Home() {
             <div className="equipment-capability-card">
               <img src="/images/Common/laser.jpeg" alt="Laser Cutting Machine" className="equipment-capability-img" />
               <div className="equipment-capability-info">
-                <FaCut className="equipment-capability-icon" />
+                <FaCogs className="equipment-capability-icon" />
                 <span>Laser Cutting Machine</span>
               </div>
             </div>
@@ -234,14 +247,14 @@ function Home() {
             <div className="equipment-capability-card">
               <img src="/images/Common/press.jpeg" alt="Press Brake Machine" className="equipment-capability-img" />
               <div className="equipment-capability-info">
-                <FaTools className="equipment-capability-icon" />
+                <FaCogs className="equipment-capability-icon" />
                 <span>Press Brake Machine</span>
               </div>
             </div>
             <div className="equipment-capability-card">
               <img src="/images/Common/weldding.jpeg" alt="Welding Units" className="equipment-capability-img" />
               <div className="equipment-capability-info">
-                <FaFire className="equipment-capability-icon" />
+                <FaCogs className="equipment-capability-icon" />
                 <span>Welding Units</span>
               </div>
             </div>

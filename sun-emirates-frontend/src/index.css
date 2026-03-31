@@ -738,9 +738,19 @@ textarea {
 }
 
 .service-card-icon {
-  font-size: 24px;
-  color: #111827;
-  margin-bottom: 16px;
+  width: 60px;
+  height: 60px;
+  background: #0f172a;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.service-card-icon svg {
+  font-size: 26px;
+  color: #ffffff;
 }
 
 .service-card-item h3 {
