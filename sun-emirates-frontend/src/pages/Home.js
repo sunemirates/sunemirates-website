@@ -177,7 +177,7 @@ function Home() {
               </Link>
             </div>
             <div className="about-image-wrapper">
-              <img src="/images/Common/page.png" alt="Sun Emirates Facility" className="about-img" />
+              <img src="/images/Common/workplace.png" alt="Sun Emirates Facility" className="about-img" />
             </div>
           </div>
         </div>
