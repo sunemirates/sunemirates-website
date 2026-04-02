@@ -534,22 +534,21 @@ textarea {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url('/images/Banner/homepage.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 
-/* GRADIENT OVERLAY */
-.hero-overlay {
+/* FIX OVERLAY */
+.hero::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 20, 40, 0.7) 0%, rgba(0, 20, 40, 0.3) 50%, rgba(0, 20, 40, 0.1) 100%);
+  background: rgba(0,0,0,0.45);
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 
@@ -2300,7 +2299,14 @@ textarea {
   
   /* Hero Section Mobile */
   .hero {
-    height: 600px;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* REMOVE EXTRA FADE */
+  .hero::before {
+    background: rgba(0,0,0,0.45) !important;
   }
   
   .hero-content {
