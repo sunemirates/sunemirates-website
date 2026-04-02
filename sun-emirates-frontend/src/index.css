@@ -2242,9 +2242,25 @@ textarea {
   }
   
   /* Navbar Mobile Styles */
+  .header,
+  .header-main {
+    background: #ffffff !important;
+  }
+  
+  .header {
+    position: relative;
+    z-index: 999;
+  }
+  
   .header-main .container {
     flex-direction: row;
     justify-content: space-between;
+    background: #ffffff;
+  }
+  
+  /* Remove hero overlap */
+  .hero {
+    margin-top: 0 !important;
   }
   
   .main-nav ul {
