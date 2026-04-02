@@ -2254,7 +2254,7 @@ textarea {
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.98);
+    background: #ffffff;
     padding: 20px;
     gap: 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -2266,13 +2266,16 @@ textarea {
   
   .main-nav ul li {
     width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
   }
   
   .main-nav ul li a {
     display: block;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-    color: #000000;
+    padding: 0;
+    border-bottom: none;
+    color: #000000 !important;
+    font-weight: 600;
   }
   
   .mobile-menu-toggle {
