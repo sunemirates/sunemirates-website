@@ -38,23 +38,19 @@ const AboutUs = () => {
             <div className="about-content">
               <h2>Company Profile</h2>
               <p>
-                Sun Emirates Mechanical Works LLC is a leading steel fabrication 
-                company established in 2007 in Al Shenaya New Industrial Area, 
-                Ajman, United Arab Emirates. With over 19 years of experience, 
-                we have built a reputation for delivering high-quality fabrication 
-                solutions to clients across various sectors.
+                Sun Emirates Mechanical Works L.L.C. is a leading steel fabrication company established in 2007 in Al Shenaya Industrial Area, Ajman, United Arab Emirates.
               </p>
 
               {/* ✅ UPDATED BULLET POINT CONTENT */}
               <ul className="features-list">
                 <li>
-                  Specialized in stainless steel and mild steel fabrication for Construction, Interior Decoration, Marine, Power, and Oil & Gas sectors.
+                  With over 19 years of industry experience, we specialize in delivering high-quality stainless steel and mild steel fabrication solutions across multiple sectors, including construction, interior decoration, marine, power, and oil & gas.
                 </li>
                 <li>
-                  We maintain the highest standards of quality and safety in all our operations.
+                 We are committed to maintaining the highest standards of quality, precision, and safety in every project we undertake.
                 </li>
                 <li>
-                  Our team of experienced engineers, technicians, and skilled workers ensures timely delivery with exceptional quality standards.
+                  Our team of experienced engineers, technicians, and skilled workforce ensures timely delivery, operational excellence, and reliable execution for projects of all scales.
                 </li>
               </ul>
 
@@ -81,19 +77,14 @@ const AboutUs = () => {
               <div className="service-card-icon">👁</div>
               <h3>Our Vision</h3>
               <p>
-                To be the preferred steel fabrication partner for EPC consultants 
-                and industrial clients in the Gulf region, recognized for technical 
-                excellence, quality craftsmanship, and reliable service.
+                To be a trusted leader in steel fabrication across the UAE and beyond, recognized for engineering excellence, reliability, and long-term client partnerships.
               </p>
             </div>
             <div className="service-card">
               <div className="service-card-icon">🎯</div>
               <h3>Our Mission</h3>
               <p>
-                To deliver high-quality steel fabrication solutions that meet 
-                international standards, while building long-term relationships 
-                with our clients through professionalism, integrity, and technical 
-                expertise.
+                To deliver high-quality fabrication solutions through skilled workmanship, advanced processes, and a strong commitment to safety, precision, and timely project execution.
               </p>
             </div>
             <div className="service-card">
