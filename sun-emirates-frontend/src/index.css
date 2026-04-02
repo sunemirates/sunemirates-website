@@ -2539,39 +2539,42 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
-/* ================= MOBILE HEADER FINAL FIX ================= */
+/* ================= MOBILE HEADER FULL FIX ================= */
 @media (max-width: 768px) {
 
   /* FORCE HEADER WHITE */
   .header,
   .header-main {
     background: #ffffff !important;
-    position: relative;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
     z-index: 9999;
   }
 
-  /* REMOVE TRANSPARENCY */
-  .header {
-    background: #fff !important;
+  /* ADD SPACE BELOW HEADER */
+  body {
+    padding-top: 80px;
+    background: #ffffff !important;
   }
 
-  /* PREVENT HERO OVERLAP */
-  .hero,
-  .hero-section {
-    margin-top: 0 !important;
-  }
-
-  /* FIX ANY PAGE TOP SECTION */
-  section:first-child,
+  /* REMOVE ANY ORANGE / GRADIENT BACKGROUND */
   .page-banner,
   .about-banner,
-  .services-banner {
+  .services-banner,
+  .hero,
+  .hero-section,
+  section:first-child {
+    background: transparent !important;
+  }
+
+  /* FIX NAV MENU BACKGROUND */
+  .main-nav ul {
     background: #ffffff !important;
   }
 
-  /* REMOVE ANY GRADIENT / ORANGE */
-  body,
-  html {
-    background: #ffffff !important;
+  /* TEXT COLOR FIX */
+  .main-nav a {
+    color: #000 !important;
   }
 }
