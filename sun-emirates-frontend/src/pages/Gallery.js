@@ -28,9 +28,8 @@ const Gallery = () => {
     { id: 65, category: 'workshop', image: '/images/Clients/IMG_0405.jpg', title: 'Workshop Image' },
     { id: 66, category: 'workshop', image: '/images/Clients/IMG_0407.jpg', title: 'Workshop Image' },
     { id: 67, category: 'workshop', image: '/images/Clients/IMG_0408.jpg', title: 'Workshop Image' },
-    { id: 68, category: 'workshop', image: '/images/Clients/IMG_0409.jpg', title: 'Workshop Image' },
     { id: 69, category: 'workshop', image: '/images/Clients/IMG_0410.jpg', title: 'Workshop Image' },
-    { id: 70, category: 'workshop', image: '/images/Clients/IMG_0411.jpg', title: 'Workshop Image' },
+    
     
     // Fabrication
     

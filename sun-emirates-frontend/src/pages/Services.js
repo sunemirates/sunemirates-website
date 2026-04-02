@@ -4,7 +4,7 @@ const Services = () => {
   const services = [
     'Sheet/ Plate Shearing and Bending',
     'Cutting of Plates',
-    'Rolling of Cones',
+    
     'Shuttering & Manholes',
     'Bending of Pipes',
     'Blasting and Painting',
