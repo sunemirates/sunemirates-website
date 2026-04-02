@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 /* ---------------- MOCK DATA ---------------- */
 
 const initialEquipment = [
-  { id: 1, name: "Lathe Machine", model: "Industrial Series", capacity: "12' x 24'", description: "Precision turning operations", image: "/images/MS/Ladder.jpg" },
+  { id: 1, name: "Lathe Machine", model: "Industrial Series", capacity: "12' x 24'", description: "Precision turning operations", image: "" },
   { id: 2, name: "Radial Drilling Machine", model: "RD-1200", capacity: "50mm", description: "Heavy duty drilling", image: "" },
   { id: 3, name: "Hydraulic Shearing Machine", model: "HS-1025", capacity: "10mm x 2500mm", description: "Precision sheet cutting", image: "" },
 ];
