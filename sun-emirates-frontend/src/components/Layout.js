@@ -38,7 +38,7 @@ const Layout = () => {
       {/* Floating Support Buttons */}
       
       <WhatsApp />
-      {!isMobile && <Chatbot />}
+      <Chatbot />
 
     </div>
   );
