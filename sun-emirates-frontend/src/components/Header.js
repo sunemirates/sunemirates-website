@@ -21,9 +21,15 @@ const Header = () => {
 
           {/* LOGO */}
           <Link to="/" className="logo">
-            <div>
-              <h1 className="logo-title">SUN EMIRATES</h1>
-              <p className="logo-subtitle">MECHANICAL WORKS L.L.C.</p>
+            <img 
+              src="/images/Common/logo.jpeg" 
+              alt="Logo" 
+              className="logo-img"
+            />
+
+            <div className="logo-text">
+              <h2>SUN EMIRATES</h2>
+              <span>MECHANICAL WORKS L.L.C.</span>
             </div>
           </Link>
 
