@@ -113,34 +113,15 @@ return (
           </div>
         </div>
 
-        {/* BUTTONS - Hidden on mobile */}
-        {!isMobile && (
+        {/* CLOSE BUTTON - Always visible */}
         <div className="chat-header-buttons" style={{ display: "flex", gap: "6px" }}>
-
-          {/* MINIMIZE - On mobile, close the chat */}
-          <button className="chat-header-btn" onClick={() => isMobile ? setIsOpen(false) : setIsMinimized(true)}>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-            </svg>
-          </button>
-
-          {/* MAXIMIZE - On mobile, just ensure chat is open */}
-          <button className="chat-header-btn" onClick={() => { setIsMinimized(false); setIsOpen(true); }}>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-              <rect x="6" y="6" width="12" height="12"/>
-            </svg>
-          </button>
-
-          {/* CLOSE */}
-          <button className="chat-header-btn" onClick={toggleChat}>
+          <button className="chat-header-btn chat-close-btn" onClick={toggleChat}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
               <line x1="18" y1="6" x2="6" y2="18"/>
               <line x1="6" y1="6" x2="18" y2="18"/>
             </svg>
           </button>
-
         </div>
-        )}
       </div>
 
       {/* BODY */}
