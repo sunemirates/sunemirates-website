@@ -94,8 +94,6 @@ useEffect(() => {
 
 return (
   <>
-    {isOpen && <div className="chat-overlay" style={{ display: 'block' }} onClick={() => setIsOpen(false)}></div>}
-
     <div className={`chat-panel ${isOpen ? "chat-panel-open" : ""} ${isMinimized ? "chat-panel-minimized" : ""}`}>
 
       {/* HEADER */}

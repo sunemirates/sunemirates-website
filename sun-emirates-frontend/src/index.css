@@ -1637,6 +1637,26 @@ textarea {
   right: 0;
 }
 
+/* Mobile: ensure panel and header are properly clickable */
+@media (max-width: 768px) {
+  .chat-panel {
+    z-index: 99999 !important;
+  }
+  
+  .chat-panel-header {
+    pointer-events: auto !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  
+  .chat-header-btn {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 100000 !important;
+    position: relative !important;
+  }
+}
+
 .chat-panel-minimized {
   width: 20% !important;
   height: 40% !important;
