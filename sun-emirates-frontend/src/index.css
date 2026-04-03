@@ -1657,6 +1657,7 @@ textarea {
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
+  pointer-events: all !important;
 }
 
 .chat-header-btn:hover {
@@ -1666,6 +1667,14 @@ textarea {
 
 .chat-header-btn:active {
   transform: scale(0.95);
+}
+
+/* Ensure close button works on mobile */
+.chat-close-btn {
+  pointer-events: all !important;
+  cursor: pointer !important;
+  z-index: 99999 !important;
+  position: relative !important;
 }
 
 /* Chat Panel Header */

@@ -114,12 +114,35 @@ return (
         </div>
 
         {/* CLOSE BUTTON - Always visible */}
-        <div className="chat-header-buttons" style={{ display: "flex", gap: "6px" }}>
-          <button className="chat-header-btn chat-close-btn" onClick={toggleChat}>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-              <line x1="18" y1="6" x2="6" y2="18"/>
-              <line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
+        <div className="chat-header-buttons" style={{ display: "flex", gap: "6px", marginLeft: "auto" }}>
+          <button 
+            className="chat-header-btn chat-close-btn" 
+            onClick={(e) => {
+              e.stopPropagation();
+              e.preventDefault();
+              setIsOpen(false);
+            }}
+            style={{
+              minWidth: '44px',
+              minHeight: '44px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'rgba(255,255,255,0.15)',
+              border: 'none',
+              borderRadius: '50%',
+              cursor: 'pointer',
+              color: 'white',
+              fontSize: '18px',
+              fontWeight: '400',
+              zIndex: 99999,
+              position: 'relative',
+              flexShrink: 0,
+              WebkitTapHighlightColor: 'transparent',
+              touchAction: 'manipulation'
+            }}
+          >
+            ✕
           </button>
         </div>
       </div>
