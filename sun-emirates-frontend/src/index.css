@@ -2373,6 +2373,12 @@ textarea {
     font-size: 8px !important;
   }
   
+  /* Home page mobile - black text */
+  .logo-text.home-page h2,
+  .logo-text.home-page span {
+    color: #000000 !important;
+  }
+  
   body {
     padding-top: 80px;
   }

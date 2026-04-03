@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   const navLinks = [
     { path: "/", label: "Home" },
@@ -32,7 +34,7 @@ const Header = () => {
               className="logo-img"
             />
 
-            <div className="logo-text">
+            <div className={`logo-text ${isHome ? 'home-page' : ''}`}>
               <h2>SUN EMIRATES</h2>
               <span>MECHANICAL WORKS L.L.C.</span>
             </div>
