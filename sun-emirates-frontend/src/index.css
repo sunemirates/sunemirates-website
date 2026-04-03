@@ -2328,9 +2328,11 @@ textarea {
     background: #ffffff !important;
     position: fixed !important;
     top: 0;
+    left: 0;
     width: 100%;
     max-width: 100%;
     z-index: 9999;
+    overflow: visible !important;
   }
   
   .header-main .container {
@@ -2345,54 +2347,72 @@ textarea {
   
   .logo {
     flex-shrink: 0;
+    display: flex !important;
+    align-items: center !important;
   }
   
   .logo-img {
-    height: 45px;
+    height: 40px !important;
   }
   
-  .logo-text {
-    font-size: 14px;
+  .logo-text,
+  .logo-text h2,
+  .logo-text span {
+    display: block !important;
+    font-size: 13px !important;
+    line-height: 1.1 !important;
+    white-space: nowrap;
+  }
+  
+  .logo-text h2 {
+    font-size: 14px !important;
+    margin: 0 !important;
   }
   
   .logo-text span {
-    font-size: 8px;
+    font-size: 8px !important;
   }
   
   body {
     padding-top: 80px;
   }
   
-  /* Hide desktop nav on mobile */
+  /* Mobile Menu - Full Screen */
   .main-nav ul {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #ffffff;
-    padding: 20px;
-    gap: 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: #ffffff !important;
+    padding: 60px 20px 20px !important;
+    gap: 0 !important;
+    z-index: 9999 !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box;
   }
   
   .main-nav ul.open {
-    display: flex;
+    display: flex !important;
   }
   
   .main-nav ul li {
     width: 100%;
-    padding: 12px 0;
+    padding: 16px 0;
     border-bottom: 1px solid #eee;
   }
   
   .main-nav ul li a {
     display: block;
-    padding: 0;
+    padding: 8px 0 !important;
     border-bottom: none;
     color: #000000 !important;
     font-weight: 600;
+    font-size: 18px !important;
+    text-align: center;
+    width: 100%;
   }
   
   .mobile-menu-toggle {
@@ -2402,6 +2422,13 @@ textarea {
   
   .mobile-menu-toggle span {
     background-color: #000000 !important;
+  }
+  
+  .mobile-menu-toggle .close-icon {
+    font-size: 24px;
+    color: #000000;
+    font-weight: bold;
+    line-height: 1;
   }
   
   .main-nav {

@@ -63,9 +63,15 @@ const Header = () => {
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
             >
-              <span></span>
-              <span></span>
-              <span></span>
+              {!mobileMenuOpen ? (
+                <>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </>
+              ) : (
+                <span className="close-icon">✕</span>
+              )}
             </div>
           </nav>
 
