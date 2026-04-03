@@ -372,7 +372,7 @@ textarea {
   color: #ffffff;
 }
 
-:root:has(.hero) .logo-text {
+:root:has(.hero) .logo-text h2 {
   color: #ffffff;
 }
 
@@ -385,7 +385,7 @@ textarea {
 }
 
 :root:has(.hero) .logo-subtitle {
-  color: #cbd5f5;
+  color: #ffffff;
 }
 
 /* SEARCH ICON */
@@ -611,6 +611,44 @@ textarea {
   gap: 16px;
   align-items: center;
   margin-top: 30px;
+}
+
+/* MOBILE RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .hero {
+    height: 85vh;
+  }
+
+  .hero::before {
+    background: rgba(0,0,0,0.35);
+  }
+
+  .hero-content {
+    top: 55%;
+    left: 20px;
+    transform: translate(0, -50%);
+    text-align: left;
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
 }
 
 /* ==================== SERVICES BAR ==================== */
