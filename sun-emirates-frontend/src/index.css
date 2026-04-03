@@ -51,6 +51,8 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: 1200px;
+  overflow-x: auto;
 }
 
 #root {
@@ -103,6 +105,7 @@ p {
 /* ==================== LAYOUT ==================== */
 .container {
   max-width: var(--container-max-width);
+  min-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -306,11 +309,11 @@ textarea {
   letter-spacing: 2px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .logo-img {
     height: 40px;
   }
-}
+} */
 
 /* NAVIGATION */
 .main-nav {
@@ -613,8 +616,8 @@ textarea {
   margin-top: 30px;
 }
 
-/* MOBILE RESPONSIVE STYLES */
-@media (max-width: 768px) {
+/* MOBILE RESPONSIVE STYLES - DISABLED */
+/* @media (max-width: 768px) {
   .hero {
     height: 85vh;
   }
@@ -649,7 +652,7 @@ textarea {
   .hero-buttons .btn {
     width: 100%;
   }
-}
+} */
 
 /* ==================== SERVICES BAR ==================== */
 .services-bar {
@@ -2241,414 +2244,7 @@ textarea {
 }
 
 /* ==================== COMPREHENSIVE RESPONSIVE STYLES ==================== */
-/* Tablet: max-width 1024px */
-@media (max-width: 1024px) {
-  .container {
-    max-width: 100%;
-    margin: auto;
-    padding: 0 15px;
-  }
-  
-  .services-card-grid,
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .equipment-capability-grid,
-  .equipment-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .clients-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .about-section,
-  .contact-section {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .hero-content h1 {
-    font-size: 36px;
-  }
-}
-
-/* Mobile: max-width 768px */
-@media (max-width: 768px) {
-  :root {
-    --font-size-main-title: 28px;
-    --font-size-section-title: 22px;
-    --section-padding: 40px 0;
-  }
-  
-  .container {
-    max-width: 100%;
-    margin: auto;
-    padding: 0 15px;
-  }
-  
-  /* Navbar Mobile Styles */
-  .header,
-  .header-main {
-    background: #ffffff !important;
-  }
-  
-  .header {
-    position: relative;
-    z-index: 999;
-  }
-  
-  .header-main .container {
-    flex-direction: row;
-    justify-content: space-between;
-    background: #ffffff;
-  }
-  
-  /* Remove hero overlap */
-  .hero {
-    margin-top: 0 !important;
-  }
-  
-  .main-nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #ffffff;
-    padding: 20px;
-    gap: 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .main-nav ul.open {
-    display: flex;
-  }
-  
-  .main-nav ul li {
-    width: 100%;
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .main-nav ul li a {
-    display: block;
-    padding: 0;
-    border-bottom: none;
-    color: #000000 !important;
-    font-weight: 600;
-  }
-  
-  .mobile-menu-toggle {
-    display: flex;
-  }
-  
-  /* Hero Section Mobile */
-  .hero {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  /* REMOVE EXTRA FADE */
-  .hero::before {
-    background: rgba(0,0,0,0.45) !important;
-  }
-  
-  .hero-content {
-    margin-left: 0;
-    max-width: 100%;
-    padding: 0 20px;
-    text-align: center;
-  }
-  
-  .hero-content h1 {
-    font-size: 28px;
-  }
-  
-  .hero-sub {
-    font-size: 14px;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  .hero-buttons .btn {
-    width: 100%;
-    text-align: center;
-  }
-  
-  /* Services Section Mobile */
-  .services-card-grid,
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .service-card-item {
-    padding: 24px;
-  }
-  
-  /* Equipment Section Mobile */
-  .equipment-capability-grid,
-  .equipment-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  /* About Section Mobile */
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  
-  .about-text h2 {
-    font-size: 28px;
-  }
-  
-  .about-text p {
-    font-size: 14px;
-  }
-  
-  /* Clients Section Mobile */
-  .clients-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  /* Gallery Section Mobile */
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-  
-  .gallery-filters {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .gallery-filter {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
-  
-  /* Stats Section Mobile */
-  .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .stat-number {
-    font-size: 32px;
-  }
-  
-  /* Footer Mobile */
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  
-  .footer-bottom {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-  
-  /* Contact Section Mobile */
-  .contact-section {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  
-  .contact-form {
-    padding: 25px;
-  }
-  
-  /* Buttons Mobile */
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .btn-primary,
-  .btn-secondary,
-  .btn-outline,
-  .btn-light {
-    width: 100%;
-  }
-  
-  /* Images Mobile */
-  img {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Team Section Mobile */
-  .team-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .team-member {
-    max-width: 100%;
-  }
-  
-  /* Services Bar Mobile */
-  .services-bar-container {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-  
-  .service-item {
-    font-size: 12px;
-    padding: 6px 10px;
-  }
-  
-  /* Page Header Mobile */
-  .page-header {
-    padding: 40px 0;
-  }
-  
-  .page-header h1 {
-    font-size: 24px;
-  }
-  
-  /* Breadcrumb Mobile */
-  .breadcrumb {
-    padding: 12px 0;
-  }
-  
-  .breadcrumb ul {
-    flex-wrap: wrap;
-    font-size: 12px;
-  }
-  
-  /* Admin Mobile */
-  .admin-layout {
-    flex-direction: column;
-  }
-  
-  .admin-sidebar {
-    width: 100%;
-  }
-  
-  .admin-main {
-    padding: 20px;
-  }
-  
-  .admin-header {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-  
-  .admin-actions {
-    flex-wrap: wrap;
-  }
-  
-  /* Client Cards Mobile */
-  .client-cards-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .client-category-filter {
-    gap: 8px;
-  }
-  
-  .category-btn {
-    padding: 6px 12px;
-    font-size: 10px;
-  }
-}
-
-/* Small Mobile: max-width 480px */
-@media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 24px;
-  }
-  
-  .hero {
-    height: 500px;
-  }
-  
-  .logo-title {
-    font-size: 20px;
-  }
-  
-  .logo-subtitle {
-    font-size: 9px;
-  }
-  
-  .clients-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* ================= MOBILE HEADER FULL FIX ================= */
-@media (max-width: 768px) {
-
-  /* FORCE HEADER WHITE */
-  .header,
-  .header-main {
-    background: #ffffff !important;
-    position: fixed !important;
-    top: 0;
-    width: 100%;
-    z-index: 9999;
-  }
-
-  /* ADD SPACE BELOW HEADER */
-  body {
-    padding-top: 80px;
-    background: #ffffff !important;
-  }
-
-  /* REMOVE ANY ORANGE / GRADIENT BACKGROUND */
-  .page-banner,
-  .about-banner,
-  .services-banner,
-  .hero,
-  .hero-section,
-  section:first-child {
-    background: transparent !important;
-  }
-
-  /* FIX NAV MENU BACKGROUND */
-  .main-nav ul {
-    background: #ffffff !important;
-  }
-
-  /* TEXT COLOR FIX */
-  .main-nav a {
-    color: #000 !important;
-  }
-}
+/* Disabled for desktop-only layout */
 
 /* ==================== BROCHURE BUTTON ==================== */
 .btn-brochure {
