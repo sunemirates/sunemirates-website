@@ -2322,56 +2322,90 @@ textarea {
     padding: 0 16px;
   }
   
-  /* Chat Panel - Full Screen on Mobile */
+  /* Chat Panel - Popup Card on Mobile */
   .chat-panel {
     position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    right: auto !important;
-    z-index: 99999 !important;
-    border-radius: 0 !important;
-    transform: none !important;
+    bottom: 70px !important;
+    right: 12px !important;
+    left: 12px !important;
+    width: auto !important;
+    height: 65vh !important;
+    max-height: 500px !important;
+    top: auto !important;
+    z-index: 9999 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18) !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
   
   .chat-panel-open {
-    right: auto !important;
-    transform: translateX(0) !important;
+    transform: translateY(0) !important;
   }
   
   .chat-panel-minimized {
-    width: 100% !important;
-    height: 60vh !important;
-    bottom: 0 !important;
-    top: auto !important;
-    right: 0 !important;
-    border-radius: 20px 20px 0 0 !important;
+    height: 50px !important;
+    width: 200px !important;
+    bottom: 70px !important;
+    right: 12px !important;
+    left: auto !important;
+    border-radius: 25px !important;
   }
   
   .chat-panel-header {
     flex-shrink: 0;
-    padding: 16px !important;
+    padding: 12px 16px !important;
+    border-radius: 16px 16px 0 0 !important;
   }
   
   .chat-panel-body {
-    flex: 1;
-    overflow-y: auto;
+    flex: 1 !important;
+    overflow-y: auto !important;
     padding: 16px !important;
+    background: #f5f5f5 !important;
+    height: auto !important;
   }
   
   .chat-panel-footer {
     flex-shrink: 0;
-    padding: 12px 16px !important;
-    border-top: 1px solid #eee;
+    padding: 10px 12px !important;
+    border-top: 1px solid #eee !important;
+    border-radius: 0 0 16px 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: white !important;
+  }
+  
+  .chat-panel-footer .chat-input {
+    flex: 1 !important;
+    border: 1px solid #ddd !important;
+    border-radius: 20px !important;
+    padding: 8px 14px !important;
+    font-size: 14px !important;
+    outline: none !important;
+  }
+  
+  .chat-panel-footer .chat-send-btn {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: #ff7a00 !important;
+    border: none !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   
   .chat-toggle-btn {
     position: fixed !important;
     bottom: 80px !important;
     right: 16px !important;
-    width: 50px !important;
-    height: 50px !important;
+    width: 48px !important;
+    height: 48px !important;
     z-index: 9998 !important;
   }
   

@@ -38,7 +38,7 @@ function App() {
   useEffect(() => {
     const password = prompt("Enter Password");
 
-    if (password === "Thanishka@178") {
+    if (password === "Thanishka@233") {
       setAllowed(true);
     }
   }, []);
