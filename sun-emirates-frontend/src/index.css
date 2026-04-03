@@ -2365,11 +2365,12 @@ textarea {
     border-radius: 16px !important;
     box-shadow: 0 8px 32px rgba(0,0,0,0.18) !important;
     overflow: hidden !important;
-    display: flex !important;
+    display: none !important;
     flex-direction: column !important;
   }
   
   .chat-panel-open {
+    display: flex !important;
     transform: translateY(0) !important;
   }
   
