@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navLinks = [
     { path: "/", label: "Home" },
@@ -14,13 +15,17 @@ const Header = () => {
     { path: "/contact", label: "Contact" },
   ];
 
+  const handleLinkClick = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header className="header">
       <div className="header-main">
         <div className="container">
 
           {/* LOGO */}
-          <Link to="/" className="logo">
+          <Link to="/" className="logo" onClick={handleLinkClick}>
             <img 
               src="/images/Common/logo.jpeg" 
               alt="Logo" 
@@ -43,6 +48,7 @@ const Header = () => {
                     className={({ isActive }) =>
                       isActive ? "active" : ""
                     }
+                    onClick={handleLinkClick}
                   >
                     {link.label}
                   </NavLink>
@@ -50,10 +56,12 @@ const Header = () => {
               ))}
             </ul>
 
-            {/* MOBILE */}
+            {/* MOBILE MENU TOGGLE */}
             <div
               className="mobile-menu-toggle"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
             >
               <span></span>
               <span></span>
