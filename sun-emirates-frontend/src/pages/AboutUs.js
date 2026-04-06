@@ -57,7 +57,7 @@ const AboutUs = () => {
             </div>
             <div>
               <img 
-                src="/images/Common/page.png" 
+                src="/images/Common/profile.jpeg" 
                 alt="Company Overview" 
                 style={{ width: '100%', height: 'auto', borderRadius: '8px' }} 
               />
@@ -112,7 +112,7 @@ const AboutUs = () => {
           <div className="about-section">
             <div className="about-image">
               <img 
-                src="/images/Common/page.png" 
+                src="/images/Common/workplace.png" 
                 alt="Workshop Facility" 
               />
             </div>

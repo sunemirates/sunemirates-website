@@ -11,15 +11,14 @@ const Gallery = () => {
   ];
 
   const galleryItems = [
-    // Workshop
     { id: 1, category: 'workshop', image: '/images/Common/workplace.png', title: 'Main Workshop' },
-    { id: 2, category: 'workshop', image: '/images/MS/PlatformStructure.jpg', title: 'Production Floor' },
+    
     { id: 55, category: 'workshop', image: '/images/Clients/IMG_0392.jpg', title: 'Workshop Image' },
     { id: 56, category: 'workshop', image: '/images/Clients/IMG_0394.jpg', title: 'Workshop Image' },
     { id: 57, category: 'workshop', image: '/images/Clients/IMG_0396.jpg', title: 'Workshop Image' },
     { id: 58, category: 'workshop', image: '/images/Clients/IMG_0397.jpg', title: 'Workshop Image' },
     { id: 59, category: 'workshop', image: '/images/Clients/IMG_0398.jpg', title: 'Workshop Image' },
-   { id: 62, category: 'workshop', image: '/images/Clients/IMG_0401.jpg', title: 'Workshop Image' },
+    { id: 62, category: 'workshop', image: '/images/Clients/IMG_0401.jpg', title: 'Workshop Image' },
     { id: 63, category: 'workshop', image: '/images/Clients/IMG_0403.jpg', title: 'Workshop Image' },
     { id: 64, category: 'workshop', image: '/images/Clients/IMG_0404.jpg', title: 'Workshop Image' },
     { id: 65, category: 'workshop', image: '/images/Clients/IMG_0405.jpg', title: 'Workshop Image' },
@@ -27,8 +26,6 @@ const Gallery = () => {
     { id: 67, category: 'workshop', image: '/images/Clients/IMG_0408.jpg', title: 'Workshop Image' },
     { id: 69, category: 'workshop', image: '/images/Clients/IMG_0410.jpg', title: 'Workshop Image' },
     
-    
-    // Fabrication
     { id: 5, category: 'fabrication', image: '/images/MS/GratingStructure.jpg', title: 'Grating Structure' },
     { id: 6, category: 'fabrication', image: '/images/MS/MezzanineSteelFloor.jpg', title: 'Mezzanine Floor' },
     { id: 7, category: 'fabrication', image: '/images/MS/Ladder.jpg', title: 'Industrial Ladder' },
@@ -38,8 +35,6 @@ const Gallery = () => {
     { id: 71, category: 'fabrication', image: '/images/Clients/what1.jpeg', title: 'Fabrication Work' },
     { id: 72, category: 'fabrication', image: '/images/Clients/what2.jpeg', title: 'Fabrication Work' },
 
-    
-    // Projects
     { id: 11, category: 'projects', image: '/images/Clients/project1.jpeg', title: 'Project 1' },
     { id: 12, category: 'projects', image: '/images/Clients/project2.jpeg', title: 'Project 2' },
     { id: 13, category: 'projects', image: '/images/Clients/project3.jpeg', title: 'Project 3' },
@@ -49,7 +44,6 @@ const Gallery = () => {
     { id: 17, category: 'projects', image: '/images/Clients/project7.jpeg', title: 'Project 7' },
     { id: 18, category: 'projects', image: '/images/Clients/project8.jpeg', title: 'Project 8' },
     { id: 19, category: 'projects', image: '/images/Clients/project9.jpeg', title: 'Project 9' },
-
     { id: 73, category: 'projects', image: '/images/Clients/what3.jpeg', title: 'Project Image' },
     { id: 74, category: 'projects', image: '/images/Clients/what4.jpeg', title: 'Project Image' },
     { id: 75, category: 'projects', image: '/images/Clients/what5.jpeg', title: 'Project Image' },
@@ -95,7 +89,6 @@ const Gallery = () => {
 
   return (
     <div>
-      {/* Page Header */}
       <div className="page-header">
         <div className="container">
           <h1>Gallery</h1>
@@ -103,10 +96,8 @@ const Gallery = () => {
         </div>
       </div>
 
-      {/* Gallery Section */}
       <section className="section">
         <div className="container">
-          {/* Category Filters */}
           <div className="gallery-filters">
             {categories.map((category) => (
               <button
@@ -119,7 +110,6 @@ const Gallery = () => {
             ))}
           </div>
 
-          {/* Gallery Grid */}
           <div className="gallery-grid">
             {filteredItems.map((item) => (
               <div key={item.id} className="gallery-item">
@@ -149,46 +139,8 @@ const Gallery = () => {
           )}
         </div>
       </section>
-
-      {/* Category Description */}
-      <section className="section bg-light">
-        <div className="container">
-          <div className="text-center mb-40">
-            <h2>Our Work Categories</h2>
-          </div>
-          <div className="services-grid">
-            <div className="service-card">
-              <div className="service-card-icon">🏭</div>
-              <h3>Workshop</h3>
-              <p>
-                Our state-of-the-art facility in Ajman with advanced equipment 
-                and organized production areas for efficient fabrication.
-              </p>
-            </div>
-            <div className="service-card">
-              <div className="service-card-icon">⚙</div>
-              <h3>Fabrication</h3>
-              <p>
-                Steel fabrication processes including cutting, bending, welding, 
-                and assembly of various structural components.
-              </p>
-            </div>
-            <div className="service-card">
-              <div className="service-card-icon">🏗</div>
-              <h3>Projects</h3>
-              <p>
-                Completed projects showcasing our expertise in structural 
-                steel works for various industrial applications.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
 
 export default Gallery;
-
-
-

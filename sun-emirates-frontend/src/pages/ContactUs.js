@@ -242,28 +242,7 @@ const ContactUs = () => {
         </div>
       </section>
 
-      {/* Services Quick Links */}
-      <section className="section">
-        <div className="container">
-          <div className="text-center mb-40">
-            <h2>Our Services</h2>
-          </div>
-          <div className="services-grid">
-            <div className="service-card">
-              <h3>Steel Fabrication</h3>
-              <p>Custom steel fabrication for construction and industrial applications</p>
-            </div>
-            <div className="service-card">
-              <h3>Structural Works</h3>
-              <p>Complete structural steel solutions including beams, columns, and platforms</p>
-            </div>
-            <div className="service-card">
-              <h3>Welding Services</h3>
-              <p>Certified welding including MIG, TIG, ARC, and submerged arc welding</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };

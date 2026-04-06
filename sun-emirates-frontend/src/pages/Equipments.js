@@ -21,6 +21,20 @@ const Equipments = () => {
         { name: "Pillar Type Drilling Machine", model: "upto 32mm Dia", capacity: "2 Nos", description: "Precision drilling operations" },
         { name: "Magnetic Drilling Machines", model: "Standard", capacity: "2 Nos", description: "Magnetic base drilling equipment" }
       ]
+    },
+    {
+      category: "Heavy Fabrication Equipment",
+      items: [
+        { name: "Air Compressors", model: "150 Litre", capacity: "2 Nos", description: "Industrial air compression" },
+        { name: "Air Compressors", model: "200 Litre", capacity: "1 No", description: "Industrial air compression" },
+        { name: "Mobile A Frame", model: "2 Ton capacity", capacity: "1 No", description: "Material handling equipment" },
+        { name: "Shearing Machine", model: "8mm capacity - 3 Mtr Long", capacity: "1 No", description: "Steel sheet cutting" },
+        { name: "Bending Machine", model: "8mm capacity - 3 Mtr Long", capacity: "1 No", description: "Steel plate bending" },
+        { name: "Hydraulic Pressing Machine", model: "200 Ton", capacity: "2 Nos", description: "Heavy duty pressing" },
+        { name: "Rolling Machine", model: "3mm thk x 3 Mtr Long", capacity: "1 No", description: "Plate rolling machine" },
+        { name: "Power Pressing Machine", model: "60 Ton", capacity: "1 No", description: "Power pressing" },
+        { name: "Power Pressing Machine", model: "120 Ton", capacity: "1 No", description: "Power pressing" }
+      ]
     }
   ];
 
@@ -31,7 +45,16 @@ const Equipments = () => {
     { image: "/images/cardview/bending machine.jpg", title: "Pipe Bending Machine" },
     { image: "/images/cardview/drilling machine.jpeg", title: "Radial Drilling Machine" },
     { image: "/images/cardview/laser cutting machine.jpg", title: "Laser Cutting Machine" },
-    { image: "/images/Common/paintbooth.png", title: "Blasting and painting" }
+    { image: "/images/Common/paintbooth.png", title: "Blasting and painting" },
+    { image: "/images/Common/no-image.png", title: "Air Compressor - 150 Litre" },
+    { image: "/images/Common/no-image.png", title: "Air Compressor - 200 Litre" },
+    { image: "/images/Common/no-image.png", title: "Mobile A Frame - 2 Ton" },
+    { image: "/images/Common/no-image.png", title: "Shearing Machine - 8mm" },
+    { image: "/images/Common/no-image.png", title: "Bending Machine - 8mm" },
+    { image: "/images/Common/no-image.png", title: "Hydraulic Pressing Machine - 200 Ton" },
+    { image: "/images/Common/no-image.png", title: "Rolling Machine - 3mm" },
+    { image: "/images/Common/no-image.png", title: "Power Pressing Machine - 60 Ton" },
+    { image: "/images/Common/no-image.png", title: "Power Pressing Machine - 120 Ton" }
   ];
 
   return (
