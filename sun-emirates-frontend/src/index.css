@@ -249,6 +249,40 @@ textarea {
   border: none;
 }
 
+/* Inner pages - solid white background when no hero section */
+:root:not(:has(.hero)) .header {
+  position: sticky !important;
+  background: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+}
+
+:root:not(:has(.hero)) .logo-text h2,
+:root:not(:has(.hero)) .logo-text span {
+  color: #000000 !important;
+}
+
+:root:not(:has(.hero)) .main-nav a {
+  color: #000000 !important;
+}
+
+:root:not(:has(.hero)) .main-nav a::after {
+  background-color: #000000 !important;
+}
+
+:root:not(:has(.hero)) .mobile-menu-toggle span {
+  background-color: #000000 !important;
+}
+
+.header-inner-pages {
+  position: sticky !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  background: #ffffff !important;
+  z-index: 9999 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+}
+
 /* REMOVE TOP BAR (optional - design doesn’t have it) */
 .header-top {
   display: none;
