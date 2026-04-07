@@ -11,17 +11,17 @@ const Gallery = () => {
   ];
 
   const galleryItems = [
-    { id: 1, category: 'workshop', image: '/images/Common/workplace.png', title: 'Main Workshop' },
     
-    { id: 55, category: 'workshop', image: '/images/Clients/IMG_0392.jpg', title: 'Workshop Image' },
+    
+ 
     { id: 56, category: 'workshop', image: '/images/Clients/IMG_0394.jpg', title: 'Workshop Image' },
     { id: 57, category: 'workshop', image: '/images/Clients/IMG_0396.jpg', title: 'Workshop Image' },
     { id: 58, category: 'workshop', image: '/images/Clients/IMG_0397.jpg', title: 'Workshop Image' },
     { id: 59, category: 'workshop', image: '/images/Clients/IMG_0398.jpg', title: 'Workshop Image' },
-    { id: 62, category: 'workshop', image: '/images/Clients/IMG_0401.jpg', title: 'Workshop Image' },
+
     { id: 63, category: 'workshop', image: '/images/Clients/IMG_0403.jpg', title: 'Workshop Image' },
     { id: 64, category: 'workshop', image: '/images/Clients/IMG_0404.jpg', title: 'Workshop Image' },
-    { id: 65, category: 'workshop', image: '/images/Clients/IMG_0405.jpg', title: 'Workshop Image' },
+
     { id: 66, category: 'workshop', image: '/images/Clients/IMG_0407.jpg', title: 'Workshop Image' },
     { id: 67, category: 'workshop', image: '/images/Clients/IMG_0408.jpg', title: 'Workshop Image' },
     { id: 69, category: 'workshop', image: '/images/Clients/IMG_0410.jpg', title: 'Workshop Image' },

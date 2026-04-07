@@ -299,33 +299,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Client Logos */}
-      <section className="section">
-        <div className="container">
-          <div className="text-center mb-40">
-            <h2>Our Clients</h2>
-            <p className="text-light">
-              Trusted by leading companies across the UAE
-            </p>
-          </div>
-          <div className="clients-grid">
-            {clients.map((client, index) => (
-              <div key={index} className="client-logo">
-                <img 
-                  src={client.src} 
-                  alt={client.alt}
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-40">
-            <Link to="/clients" className="btn btn-outline">
-              View All Clients
-            </Link>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Contact CTA */}
       <section className="section bg-dark">

@@ -46,15 +46,15 @@ const Equipments = () => {
     { image: "/images/cardview/drilling machine.jpeg", title: "Radial Drilling Machine" },
     { image: "/images/cardview/laser cutting machine.jpg", title: "Laser Cutting Machine" },
     { image: "/images/Common/paintbooth.png", title: "Blasting and painting" },
-    { image: "/images/Common/no-image.png", title: "Air Compressor - 150 Litre" },
-    { image: "/images/Common/no-image.png", title: "Air Compressor - 200 Litre" },
-    { image: "/images/Common/no-image.png", title: "Mobile A Frame - 2 Ton" },
-    { image: "/images/Common/no-image.png", title: "Shearing Machine - 8mm" },
-    { image: "/images/Common/no-image.png", title: "Bending Machine - 8mm" },
-    { image: "/images/Common/no-image.png", title: "Hydraulic Pressing Machine - 200 Ton" },
-    { image: "/images/Common/no-image.png", title: "Rolling Machine - 3mm" },
-    { image: "/images/Common/no-image.png", title: "Power Pressing Machine - 60 Ton" },
-    { image: "/images/Common/no-image.png", title: "Power Pressing Machine - 120 Ton" }
+    { image: `${process.env.PUBLIC_URL}/images/cardview/air-150.jpeg`, title: "Air Compressor - 150 Litre" },
+    { image: `${process.env.PUBLIC_URL}/images/cardview/air-200.jpeg`, title: "Air Compressor - 200 Litre" },
+   
+    { image: "/images/cardview/shearing.jpeg", title: "Shearing Machine - 8mm" },
+    { image: "/images/cardview/bending.jpeg", title: "Bending Machine - 8mm" },
+   
+    { image: "/images/cardview/rolling.jpeg", title: "Rolling Machine - 3mm" },
+    { image: "/images/cardview/power press.jpeg", title: "Power Pressing Machine - 60 Ton" },
+    { image: "/images/cardview/power pressing.jpeg", title: "ower Pressing Machine - 120 Ton" }
   ];
 
   return (
