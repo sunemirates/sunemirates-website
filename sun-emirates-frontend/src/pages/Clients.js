@@ -3,19 +3,7 @@ import React, { useState } from 'react';
 const Clients = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const clients = [
-    { src: "/images/Clients/Clients1.png", alt: "KHANSAHEB", category: "Construction" },
-    { src: "/images/Clients/Clients2.png", alt: "AL Basti & Muktha LLC", category: "Construction" },
-    { src: "/images/Clients/Clients3.png", alt: "ThyssenKrupp", category: "Engineering" },
-    { src: "/images/Clients/Clients4.png", alt: "MEGARME", category: "Marine" },
-    { src: "/images/Clients/Clients5.png", alt: "New Trade Links LLC", category: "Trading" },
-    { src: "/images/Clients/Clients6.png", alt: "Ferrotech International Fze", category: "Industrial" },
-    { src: "/images/Clients/Clients7.png", alt: "Al Ghandi Electronics", category: "Electronics" },
-    { src: "/images/Clients/Clients8.png", alt: "Hi-Tec", category: "Technology" },
-    { src: "/images/Clients/Clients9.png", alt: "Somec-Sharaf", category: "Construction" },
-    { src: "/images/Clients/Clients10.png", alt: "STADLERS", category: "Railway" },
-    { src: "/images/Clients/Clients11.png", alt: "AL REYAMI", category: "Construction" },
-    { src: "/images/Clients/Clients12.png", alt: "Dutco Balfour Beatty LLC", category: "Construction" },
-    { src: "/images/Clients/Clients13.png", alt: "AL REYAMI INTERIORS", category: "Interior" }
+    
   ];
 
   const clientList = [
@@ -104,31 +92,7 @@ const Clients = () => {
         </div>
       </div>
 
-      {/* Client Logos */}
-      <section className="section">
-        <div className="container">
-          <div className="text-center mb-40">
-            <h2>Our Valued Clients</h2>
-            <p className="text-light">
-              We are proud to have served a diverse range of clients across various industries
-            </p>
-          </div>
-
-          <div className="clients-grid">
-            {clients.map((client, index) => (
-              <div key={index} className="client-logo">
-                <img 
-                  src={client.src} 
-                  alt={client.alt}
-                  title={client.alt}
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+     
       {/* Client List - Unique Card Design */}
       <section className="section bg-light">
         <div className="container">

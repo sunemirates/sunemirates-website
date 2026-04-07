@@ -27,7 +27,7 @@ const Gallery = () => {
     { id: 69, category: 'workshop', image: '/images/Clients/IMG_0410.jpg', title: 'Workshop Image' },
     
     { id: 5, category: 'fabrication', image: '/images/MS/GratingStructure.jpg', title: 'Grating Structure' },
-    { id: 6, category: 'fabrication', image: '/images/MS/MezzanineSteelFloor.jpg', title: 'Mezzanine Floor' },
+    
     { id: 7, category: 'fabrication', image: '/images/MS/Ladder.jpg', title: 'Industrial Ladder' },
     { id: 8, category: 'fabrication', image: '/images/MS/StairCase.jpg', title: 'Staircase' },
     { id: 9, category: 'fabrication', image: '/images/MS/PipeSupport.jpg', title: 'Pipe Support' },
