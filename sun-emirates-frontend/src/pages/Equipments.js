@@ -150,7 +150,7 @@ const Equipments = () => {
 
                 </div>
               ))}
-            </div>
+            </div> 
           )}
 
         </div>

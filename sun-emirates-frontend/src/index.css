@@ -335,16 +335,38 @@ textarea {
 }
 
 .logo-text h2 {
-  font-size: 22px;
+  font-size: 32px;
+  font-weight: 700;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .logo-text span {
-  font-size: 12px;
-  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .logo-text h2 {
+    font-size: 22px;
+  }
+
+  .logo-text span {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 769px) {
+  .logo-text h2 {
+    font-size: 32px !important;
+  }
+
+  .logo-text span {
+    font-size: 16px !important;
+  }
 }
 
 /* @media (max-width: 768px) {
@@ -633,10 +655,10 @@ textarea {
 
 /* HEADING */
 .hero-content h1 {
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 34px;
   line-height: 1.1;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  font-weight: 700;
   color: #fff;
 }
 
@@ -675,7 +697,7 @@ textarea {
   }
 
   .hero-content h1 {
-    font-size: 28px;
+    font-size: 26px;
     line-height: 1.3;
   }
 

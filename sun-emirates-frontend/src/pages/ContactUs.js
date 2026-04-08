@@ -109,7 +109,7 @@ const ContactUs = () => {
                   <p>
                     sales@sunemirates.com<br />
                     saminathan@sunemirates.com<br />
-                    sunemw@eim.ae
+                    sunemirates@gmail.com
                   </p>
                 </div>
               </div>
