@@ -50,11 +50,11 @@ const Equipments = () => {
     { image: `${process.env.PUBLIC_URL}/images/cardview/air-200.jpeg`, title: "Air Compressor - 200 Litre" },
    
     { image: "/images/cardview/shearing.jpeg", title: "Shearing Machine - 8mm" },
-    { image: "/images/cardview/bending.jpeg", title: "Bending Machine - 8mm" },
+    
    
     { image: "/images/cardview/rolling.jpeg", title: "Rolling Machine - 3mm" },
     { image: "/images/cardview/power press.jpeg", title: "Power Pressing Machine - 60 Ton" },
-    { image: "/images/cardview/power pressing.jpeg", title: "ower Pressing Machine - 120 Ton" }
+    { image: "/images/cardview/power pressing.jpeg", title: "Power Pressing Machine - 120 Ton" }
   ];
 
   return (
