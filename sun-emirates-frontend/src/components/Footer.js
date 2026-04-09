@@ -37,12 +37,12 @@ const Footer = () => {
           {/* Services */}
           <div className="footer-section">
             <h4>Services</h4>
-            <Link to="/services">Steel Fabrication</Link>
-            <Link to="/services">Structural Works</Link>
-            <Link to="/services">Pipe Fabrication</Link>
-            <Link to="/services">Welding Works</Link>
-            <Link to="/services">Surface Treatment</Link>
-            <Link to="/services">Machine Shop</Link>
+            <p>Steel Fabrication</p>
+            <p>Structural Works</p>
+            <p>Pipe Fabrication</p>
+            <p>Welding Works</p>
+            <p>Surface Treatment</p>
+            <p>Machine Shop</p>
           </div>
 
           {/* Contact Info */}
