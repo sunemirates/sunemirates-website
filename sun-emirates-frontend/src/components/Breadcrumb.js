@@ -35,26 +35,44 @@ const Breadcrumb = () => {
   };
 
   return (
-    <div className="breadcrumb">
-      <div className="bcRootNode">
-        <Link to="/">Home</Link>
-      </div>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      flexWrap: 'nowrap',
+      gap: '8px',
+      padding: '12px 20px',
+      backgroundColor: '#f5f5f5',
+      fontSize: '14px',
+      overflowX: 'auto'
+    }}>
+      <Link to="/" style={{
+        color: '#555',
+        textDecoration: 'none',
+        whiteSpace: 'nowrap'
+      }}>
+        Home
+      </Link>
       {pathnames.map((name, index) => {
         const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
         const isLast = index === pathnames.length - 1;
 
         return (
           <React.Fragment key={name}>
-            <div className="bcSeparator">
-              <img 
-                src="/images/Common/breadcrumdivdr.png" 
-                alt="BreadCrumb" 
-                align="absMiddle" 
-              />
-            </div>
-            <div className={isLast ? "bcCurrentNode" : "bcRootNode"}>
-              {isLast ? getPageTitle(name) : <Link to={routeTo}>{getPageTitle(name)}</Link>}
-            </div>
+            <span style={{ color: '#e05a00', fontSize: '12px', whiteSpace: 'nowrap' }}>▶</span>
+            {isLast ? (
+              <span style={{ color: '#333', fontWeight: 600, whiteSpace: 'nowrap' }}>
+                {getPageTitle(name)}
+              </span>
+            ) : (
+              <Link to={routeTo} style={{
+                color: '#555',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap'
+              }}>
+                {getPageTitle(name)}
+              </Link>
+            )}
           </React.Fragment>
         );
       })}
