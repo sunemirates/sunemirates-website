@@ -59,7 +59,7 @@ const Breadcrumb = () => {
 
         return (
           <React.Fragment key={name}>
-            <span style={{ color: '#e05a00', fontSize: '12px', whiteSpace: 'nowrap' }}>▶</span>
+            <span style={{ color: '#1a3c6e', fontSize: '12px', whiteSpace: 'nowrap' }}>▶</span>
             {isLast ? (
               <span style={{ color: '#333', fontWeight: 600, whiteSpace: 'nowrap' }}>
                 {getPageTitle(name)}
