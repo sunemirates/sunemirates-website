@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaCogs, FaIndustry, FaTools, FaDraftingCompass } from "react-icons/fa";
 import { GiLaserPrecision, GiTorch } from "react-icons/gi";
 import Chatbot from "../components/Chatbot";
-
+<meta name="google-site-verification" content="dlg45tSFQnKAjOHCMS2-U3Tf842MwbMFJQGbzXpxSOE" />
 const clients = [
   { src: "/images/Clients/Clients1.png", alt: "KHANSAHEB" },
   { src: "/images/Clients/Clients2.png", alt: "AL Basti & Muktha LLC" },
