@@ -41,9 +41,6 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-  overflow-x: hidden !important;
-  max-width: 100% !important;
-  box-sizing: border-box !important;
 }
 
 body {
@@ -55,10 +52,8 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden !important;
-  max-width: 100% !important;
-  min-width: 320px;
-  box-sizing: border-box !important;
+  overflow-x: hidden;
+  min-width: 1200px;
 }
 
 #root {
@@ -68,10 +63,6 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-}
-
-* {
-  box-sizing: border-box !important;
 }
 
 a {
@@ -85,8 +76,8 @@ a:hover {
 }
 
 img {
-  max-width: 100% !important;
-  height: auto !important;
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -118,10 +109,9 @@ p {
 /* ==================== LAYOUT ==================== */
 .container {
   max-width: var(--container-max-width);
-  min-width: 320px;
+  min-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  box-sizing: border-box;
 }
 
 .page-container {
@@ -2803,218 +2793,4 @@ textarea {
 
 .btn-brochure:hover {
   background: #1d4ed8;
-}
-
-/* ==================== COMPREHENSIVE MOBILE STYLES ==================== */
-@media (max-width: 768px) {
-  /* Sections - full width, proper padding */
-  section, .section, [class*="section"] {
-    padding: 32px 16px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-  }
-
-  /* Typography */
-  h1 { font-size: clamp(22px, 6vw, 36px) !important; }
-  h2 { font-size: clamp(18px, 5vw, 28px) !important; }
-  h3 { font-size: clamp(16px, 4vw, 22px) !important; }
-  p { font-size: 14px !important; line-height: 1.6 !important; }
-
-  /* Touch targets */
-  button, a, .btn {
-    min-height: 44px !important;
-    touch-action: manipulation !important;
-  }
-
-  /* Form inputs - prevent iOS zoom */
-  input, textarea, select {
-    font-size: 16px !important;
-    width: 100% !important;
-  }
-
-  /* Grid layouts - single column */
-  .grid-2, .grid-3, .grid-4,
-  [class*="grid"], [class*="col"],
-  .services-card-grid, .services-grid,
-  .equipment-grid, .equipment-capability-grid,
-  .clients-grid, .gallery-grid, .stats-grid,
-  .footer-grid, .about-grid {
-    grid-template-columns: 1fr !important;
-    width: 100% !important;
-    gap: 16px !important;
-  }
-
-  /* Container - full width on mobile */
-  .container {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 16px !important;
-    min-width: auto !important;
-  }
-
-  /* Navbar mobile */
-  .header {
-    height: auto !important;
-    min-height: 60px !important;
-    padding: 8px 16px !important;
-  }
-
-  .logo img {
-    height: 40px !important;
-    max-width: 50px !important;
-    max-height: 50px !important;
-  }
-
-  .logo-text h2 {
-    font-size: 14px !important;
-  }
-
-  .logo-text span {
-    font-size: 8px !important;
-  }
-
-  /* Hamburger menu - always visible on mobile */
-  .mobile-menu-toggle {
-    display: flex !important;
-    min-width: 44px !important;
-    min-height: 44px !important;
-    padding: 10px !important;
-  }
-
-  /* Hero mobile */
-  .hero {
-    min-height: auto !important;
-    height: auto !important;
-    min-height: calc(100vh - 60px) !important;
-    padding: 60px 16px 40px !important;
-  }
-
-  .hero-content {
-    padding-top: 20px !important;
-    margin-left: 0 !important;
-    max-width: 100% !important;
-  }
-
-  .hero-content h1 {
-    font-size: clamp(20px, 5vw, 32px) !important;
-  }
-
-  .hero-buttons {
-    flex-direction: column !important;
-    gap: 12px !important;
-  }
-
-  .hero-buttons .btn {
-    width: 100% !important;
-    text-align: center !important;
-  }
-
-  /* Services bar - horizontal scroll */
-  .services-bar-container {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    gap: 12px !important;
-    padding: 0 16px !important;
-  }
-
-  .service-item {
-    flex-shrink: 0 !important;
-    font-size: 12px !important;
-    padding: 8px 12px !important;
-  }
-
-  /* Cards - single column */
-  .service-card-item,
-  .equipment-capability-card,
-  .equipment-card,
-  .stat-item {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Footer */
-  .footer-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-  }
-
-  .footer-bottom {
-    flex-direction: column !important;
-    gap: 16px !important;
-    text-align: center !important;
-  }
-
-  .social-links {
-    justify-content: center !important;
-  }
-
-  /* Breadcrumb */
-  .breadcrumb {
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    white-space: nowrap !important;
-  }
-
-  /* Chatbot button */
-  .chat-toggle-btn {
-    bottom: 80px !important;
-    right: 16px !important;
-    width: 50px !important;
-    height: 50px !important;
-    z-index: 9998 !important;
-    display: flex !important;
-  }
-
-  /* WhatsApp button */
-  .whatsappIcon {
-    bottom: 16px !important;
-    right: 16px !important;
-    width: 52px !important;
-    height: 52px !important;
-    z-index: 9997 !important;
-    display: flex !important;
-  }
-
-  /* Chat panel popup */
-  .chat-panel {
-    position: fixed !important;
-    bottom: 70px !important;
-    left: 12px !important;
-    right: 12px !important;
-    width: auto !important;
-    height: 65vh !important;
-    max-height: 480px !important;
-    border-radius: 16px !important;
-    z-index: 9999 !important;
-    display: none !important;
-  }
-
-  .chat-panel-open {
-    display: flex !important;
-  }
-
-  .chat-panel-header {
-    z-index: 99999 !important;
-  }
-
-  .chat-close-btn {
-    z-index: 99999 !important;
-    pointer-events: auto !important;
-  }
-
-  /* Forms */
-  .contact-form {
-    padding: 20px !important;
-  }
-
-  .form-group {
-    width: 100% !important;
-  }
-
-  /* Page header */
-  .page-header {
-    padding: 40px 16px !important;
-  }
 }
