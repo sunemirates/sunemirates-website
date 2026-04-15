@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
@@ -6,6 +6,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const menuRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,24 @@ const Header = () => {
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    if (mobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('touchstart', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { path: "/", label: "Home" },
@@ -55,7 +74,7 @@ const Header = () => {
           </Link>
 
           {/* NAV */}
-          <nav className="main-nav">
+          <nav className="main-nav" ref={menuRef}>
             <ul className={`nav-list ${mobileMenuOpen ? "open" : ""}`}>
               {navLinks.map((link) => (
                 <li key={link.path}>
@@ -72,7 +91,7 @@ const Header = () => {
               ))}
             </ul>
 
-            {/* MOBILE MENU TOGGLE */}
+            {/* MOBILE MENU TOGGLE - 3 dots icon */}
             <button
               className={`mobile-menu-toggle ${mobileMenuOpen ? "open" : ""}`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -81,11 +100,7 @@ const Header = () => {
               type="button"
             >
               {!mobileMenuOpen ? (
-                <>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </>
+                <span className="menu-dots">⋮</span>
               ) : (
                 <span className="close-icon">✕</span>
               )}
