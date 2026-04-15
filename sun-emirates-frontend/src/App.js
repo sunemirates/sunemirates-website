@@ -14,7 +14,7 @@ import Gallery from "./pages/Gallery";
 
 // Additional pages
 import Feedback from "./pages/Feedback";
-import Sitemap from "./pages/Sitemap";
+
 import LocationMap from "./pages/LocationMap";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Disclaimer from "./pages/Disclaimer";

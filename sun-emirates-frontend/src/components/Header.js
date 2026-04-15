@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
@@ -17,17 +17,17 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    setMobileMenuOpen(false);
+    setMenuOpen(false);
   }, [location.pathname]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setMobileMenuOpen(false);
+        setMenuOpen(false);
       }
     };
 
-    if (mobileMenuOpen) {
+    if (menuOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       document.addEventListener('touchstart', handleClickOutside);
     }
@@ -36,7 +36,7 @@ const Header = () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside);
     };
-  }, [mobileMenuOpen]);
+  }, [menuOpen]);
 
   const navLinks = [
     { path: "/", label: "Home" },
@@ -49,7 +49,7 @@ const Header = () => {
   ];
 
   const handleLinkClick = () => {
-    setMobileMenuOpen(false);
+    setMenuOpen(false);
   };
 
   const headerClass = `header${isScrolled || !isHome ? ' header-scrolled' : ''}${isHome ? ' header-home' : ''}`;
@@ -75,7 +75,7 @@ const Header = () => {
 
           {/* NAV */}
           <nav className="main-nav" ref={menuRef}>
-            <ul className={`nav-list ${mobileMenuOpen ? "open" : ""}`}>
+            <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
               {navLinks.map((link) => (
                 <li key={link.path}>
                   <NavLink
@@ -93,16 +93,16 @@ const Header = () => {
 
             {/* MOBILE MENU TOGGLE - Hamburger icon */}
             <button
-              className={`mobile-menu-toggle ${mobileMenuOpen ? "open" : ""}`}
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={mobileMenuOpen}
+              className={`menu-btn ${menuOpen ? "open" : ""}`}
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
               type="button"
             >
-              {!mobileMenuOpen ? (
-                <span className="hamburger-icon">☰</span>
-              ) : (
+              {menuOpen ? (
                 <span className="close-icon">✕</span>
+              ) : (
+                <span className="hamburger-icon">☰</span>
               )}
             </button>
           </nav>
