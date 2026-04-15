@@ -2469,7 +2469,7 @@ textarea {
   }
 
   /* Hide hamburger on tablet */
-  .mobile-menu-toggle {
+  .menu-btn {
     display: none !important;
   }
 
