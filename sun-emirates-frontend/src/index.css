@@ -3158,11 +3158,12 @@ textarea {
   
   .header-home .mobile-menu-toggle .hamburger-icon {
     color: #ffffff !important;
-    margin-left:100px;
+    margin-left:60px;
   }
   
   .header-scrolled .mobile-menu-toggle .hamburger-icon {
     color: #000000 !important;
+    margin-left:60px;
   }
   
   .header-main .container {
