@@ -51,7 +51,6 @@ function App() {
 
         {/* Extra Pages */}
         <Route path="feedback" element={<Feedback />} />
-        <Route path="sitemap" element={<Sitemap />} />
         <Route path="locationmap" element={<LocationMap />} />
         <Route path="privacypolicy" element={<PrivacyPolicy />} />
         <Route path="disclaimer" element={<Disclaimer />} />
