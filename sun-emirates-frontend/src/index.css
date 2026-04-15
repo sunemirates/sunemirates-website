@@ -2597,7 +2597,11 @@ textarea {
   }
   
   :root:not(:has(.hero)) .mobile-menu-toggle span {
-    background-color: #000000 !important;
+    background-color: transparent !important;
+  }
+  
+  .mobile-menu-toggle span {
+    background: transparent !important;
   }
   
   .logo img {
@@ -3152,11 +3156,11 @@ textarea {
     color: #ffffff !important;
   }
   
-  .header-home .hamburger-icon {
+  .header-home .mobile-menu-toggle .hamburger-icon {
     color: #ffffff !important;
   }
   
-  .header-scrolled .hamburger-icon {
+  .header-scrolled .mobile-menu-toggle .hamburger-icon {
     color: #000000 !important;
   }
   
@@ -3214,38 +3218,37 @@ textarea {
     background: transparent !important;
     border: none !important;
     cursor: pointer !important;
-    padding: 8px 12px !important;
+    padding: 10px !important;
     flex-shrink: 0 !important;
     z-index: 9999 !important;
+    color: inherit !important;
+  }
+  
+  /* Hide default spans, show hamburger icon */
+  .mobile-menu-toggle span {
+    display: none !important;
+    background: transparent !important;
   }
   
   .mobile-menu-toggle .hamburger-icon {
-    font-size: 22px !important;
-    font-weight: 600 !important;
+    display: inline-block !important;
+    font-size: 24px !important;
+    font-weight: 400 !important;
     color: #000000 !important;
     line-height: 1 !important;
   }
   
+  .header-home .mobile-menu-toggle .hamburger-icon,
   .header-home .hamburger-icon {
     color: #ffffff !important;
   }
   
+  .header-scrolled .mobile-menu-toggle .hamburger-icon,
   .header-scrolled .hamburger-icon {
     color: #000000 !important;
   }
   
-  .hamburger-icon {
-    font-size: 22px !important;
-    font-weight: 600 !important;
-    color: #000000 !important;
-    line-height: 1 !important;
-  }
-  
-  .header-home .hamburger-icon {
-    color: #ffffff !important;
-  }
-  
-  .header-scrolled .hamburger-icon {
+  .close-icon {
     color: #000000 !important;
   }
   
