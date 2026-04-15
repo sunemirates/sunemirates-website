@@ -3158,6 +3158,7 @@ textarea {
   
   .header-home .mobile-menu-toggle .hamburger-icon {
     color: #ffffff !important;
+    margin-left:700px;
   }
   
   .header-scrolled .mobile-menu-toggle .hamburger-icon {
