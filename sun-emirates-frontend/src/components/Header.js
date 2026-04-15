@@ -93,7 +93,7 @@ const Header = () => {
 
             {/* MOBILE MENU TOGGLE - Hamburger icon */}
             <button
-              className={`menu-btn ${menuOpen ? "open" : ""}`}
+              className={`mobile-menu-toggle ${menuOpen ? "open" : ""}`}
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}

@@ -2469,7 +2469,7 @@ textarea {
   }
 
   /* Hide hamburger on tablet */
-  .menu-btn {
+  .mobile-menu-toggle {
     display: none !important;
   }
 
@@ -3203,7 +3203,7 @@ textarea {
   }
   
   /* Mobile Menu Toggle - Hamburger button */
-  .menu-btn {
+  .mobile-menu-toggle {
     display: block !important;
     position: absolute !important;
     right: 0 !important;
@@ -3214,12 +3214,12 @@ textarea {
     background: transparent !important;
     border: none !important;
     cursor: pointer !important;
-    padding: 8px !important;
+    padding: 8px 12px !important;
     flex-shrink: 0 !important;
     z-index: 9999 !important;
   }
   
-  .hamburger-icon {
+  .mobile-menu-toggle .hamburger-icon {
     font-size: 22px !important;
     font-weight: 600 !important;
     color: #000000 !important;
