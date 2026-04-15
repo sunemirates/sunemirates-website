@@ -30,8 +30,8 @@ const AdminDashboard = () => {
   const [activeTab, setActiveTab] = useState("equipment");
 
   const [equipment, setEquipment] = useState(initialEquipment);
-  const [gallery, setGallery] = useState(initialGallery);
-  const [clients, setClients] = useState(initialClients);
+  const [_gallery, _setGallery] = useState(initialGallery);
+  const [_clients, _setClients] = useState(initialClients);
   const [messages, setMessages] = useState(initialMessages);
 
   const [showEquipmentForm, setShowEquipmentForm] = useState(false);

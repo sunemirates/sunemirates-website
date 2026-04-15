@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 
 const Clients = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const clients = [
-    
-  ];
 
   const clientList = [
     { name: "KHANSAHEB CIVIL ENGG. L.L.C", category: "Construction",  },
