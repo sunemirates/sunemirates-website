@@ -3161,10 +3161,11 @@ textarea {
   }
   
   .header-main .container {
-    padding: 0 12px !important;
+    padding: 0 12px 0 12px !important;
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
+    gap: 8px !important;
   }
   
   .logo {
@@ -3190,6 +3191,10 @@ textarea {
   /* ===== NAVIGATION ===== */
   .main-nav {
     position: relative !important;
+    display: flex !important;
+    flex: 1 !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
   }
   
   /* Hide horizontal nav on mobile */
@@ -3202,14 +3207,14 @@ textarea {
     display: block !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 40px !important;
-    height: 40px !important;
+    width: 44px !important;
+    height: 44px !important;
     background: transparent !important;
     border: none !important;
     cursor: pointer !important;
-    padding: 0 !important;
+    padding: 8px !important;
     flex-shrink: 0 !important;
-    z-index: 10001 !important;
+    z-index: 9999 !important;
     margin-left: auto !important;
   }
   
