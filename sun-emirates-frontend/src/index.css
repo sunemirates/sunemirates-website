@@ -2658,6 +2658,7 @@ textarea {
     padding: 80px 16px 40px !important;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   
   .hero-content {
@@ -2665,6 +2666,11 @@ textarea {
     max-width: 100% !important;
     text-align: center;
     padding-top: 20px;
+    width: 100% !important;
+  }
+  
+  .hero-content * {
+    text-align: center !important;
   }
   
   .hero-content h1 {
@@ -3365,6 +3371,27 @@ textarea {
     font-size: 13px !important;
   }
   
+  /* Center aligned hero */
+  .hero {
+    justify-content: center !important;
+  }
+  
+  .hero-content {
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    width: 100% !important;
+  }
+  
+  .hero-content * {
+    text-align: center !important;
+  }
+  
+  .hero-buttons {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
   /* ===== SERVICES ===== */
   .services-bar-container {
     flex-direction: column !important;
