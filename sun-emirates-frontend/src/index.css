@@ -3152,11 +3152,11 @@ textarea {
     color: #ffffff !important;
   }
   
-  .header-home .menu-dots {
+  .header-home .hamburger-icon {
     color: #ffffff !important;
   }
   
-  .header-scrolled .menu-dots {
+  .header-scrolled .hamburger-icon {
     color: #000000 !important;
   }
   
@@ -3197,7 +3197,7 @@ textarea {
     display: none !important;
   }
   
-  /* Mobile Menu Toggle - 3 dots icon */
+  /* Mobile Menu Toggle - Hamburger icon */
   .mobile-menu-toggle {
     display: flex !important;
     align-items: center !important;
@@ -3213,18 +3213,33 @@ textarea {
     margin-left: auto !important;
   }
   
-  .menu-dots {
-    font-size: 24px !important;
-    font-weight: 700 !important;
+  .hamburger-icon {
+    font-size: 22px !important;
+    font-weight: 600 !important;
     color: #000000 !important;
     line-height: 1 !important;
   }
   
-  .header-home .menu-dots {
+  .header-home .hamburger-icon {
     color: #ffffff !important;
   }
   
-  .header-scrolled .menu-dots {
+  .header-scrolled .hamburger-icon {
+    color: #000000 !important;
+  }
+  
+  .hamburger-icon {
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    color: #000000 !important;
+    line-height: 1 !important;
+  }
+  
+  .header-home .hamburger-icon {
+    color: #ffffff !important;
+  }
+  
+  .header-scrolled .hamburger-icon {
     color: #000000 !important;
   }
   

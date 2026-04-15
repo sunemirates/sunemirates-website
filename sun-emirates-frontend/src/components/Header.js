@@ -91,7 +91,7 @@ const Header = () => {
               ))}
             </ul>
 
-            {/* MOBILE MENU TOGGLE - 3 dots icon */}
+            {/* MOBILE MENU TOGGLE - Hamburger icon */}
             <button
               className={`mobile-menu-toggle ${mobileMenuOpen ? "open" : ""}`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -100,7 +100,7 @@ const Header = () => {
               type="button"
             >
               {!mobileMenuOpen ? (
-                <span className="menu-dots">⋮</span>
+                <span className="hamburger-icon">☰</span>
               ) : (
                 <span className="close-icon">✕</span>
               )}
