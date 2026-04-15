@@ -35,7 +35,7 @@ const Breadcrumb = () => {
   };
 
   return (
-    <div style={{
+    <div className="breadcrumb" style={{
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
@@ -44,7 +44,9 @@ const Breadcrumb = () => {
       padding: '12px 20px',
       backgroundColor: '#f5f5f5',
       fontSize: '14px',
-      overflowX: 'auto'
+      overflowX: 'auto',
+      whiteSpace: 'nowrap',
+      minWidth: 'max-content'
     }}>
       <Link to="/" style={{
         color: '#555',
