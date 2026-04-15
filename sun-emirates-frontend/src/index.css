@@ -3191,10 +3191,6 @@ textarea {
   /* ===== NAVIGATION ===== */
   .main-nav {
     position: relative !important;
-    display: flex !important;
-    flex: 1 !important;
-    justify-content: flex-end !important;
-    align-items: center !important;
   }
   
   /* Hide horizontal nav on mobile */
@@ -3205,8 +3201,10 @@ textarea {
   /* Mobile Menu Toggle - Hamburger button */
   .menu-btn {
     display: block !important;
-    align-items: center !important;
-    justify-content: center !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     width: 44px !important;
     height: 44px !important;
     background: transparent !important;
@@ -3215,7 +3213,6 @@ textarea {
     padding: 8px !important;
     flex-shrink: 0 !important;
     z-index: 9999 !important;
-    margin-left: auto !important;
   }
   
   .hamburger-icon {
