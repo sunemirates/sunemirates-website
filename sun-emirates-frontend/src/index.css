@@ -2635,6 +2635,16 @@ textarea {
   
   .main-nav {
     position: relative;
+    display: flex !important;
+    align-items: center !important;
+    margin-left: auto !important;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex !important;
+    position: relative !important;
+    margin-left: auto !important;
+    z-index: 10001 !important;
   }
   
   /* Hero Mobile */
