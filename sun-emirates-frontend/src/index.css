@@ -3156,15 +3156,20 @@ textarea {
     color: #ffffff !important;
   }
   
-  .header-home .mobile-menu-toggle .hamburger-icon {
-    color: #ffffff !important;
-    margin-left:60px;
-  }
-  
-  .header-scrolled .mobile-menu-toggle .hamburger-icon {
-    color: #000000 !important;
-    margin-left:60px;
-  }
+ /* ✅ REMOVE WRONG SPACING */
+.header-home .mobile-menu-toggle .hamburger-icon,
+.header-scrolled .mobile-menu-toggle .hamburger-icon {
+  margin-left: 0 !important;   /* 🔥 FIX */
+}
+
+/* ✅ COLOR FIX */
+.header-home .mobile-menu-toggle span {
+  background-color: #ffffff !important;
+}
+
+.header-scrolled .mobile-menu-toggle span {
+  background-color: #000000 !important;
+}
   
   .header-main .container {
     padding: 0 0 0 12px !important;
