@@ -2570,7 +2570,7 @@ textarea {
   .header {
     height: auto !important;
     min-height: 70px !important;
-    padding: 12px 16px !important;
+    padding: 12px 0 12px 16px !important;
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
@@ -3161,11 +3161,15 @@ textarea {
   }
   
   .header-main .container {
-    padding: 0 12px 0 12px !important;
+    padding: 0 0 0 12px !important;
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
     gap: 8px !important;
+  }
+  
+  .header-main {
+    padding-right: 0 !important;
   }
   
   .logo {
