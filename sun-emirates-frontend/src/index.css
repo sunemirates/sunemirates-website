@@ -2634,37 +2634,46 @@ textarea {
     width: auto !important;
   }
   
-  .main-nav {
+.main-nav {
     overflow-x: visible !important;
-  }
-
-  .mobile-menu-toggle {
-    display: none !important;
-  }
-  
-  .mobile-menu-toggle span {
-    background-color: #000000 !important;
-  }
-  
-  .mobile-menu-toggle .close-icon {
-    font-size: 24px;
-    color: #000000;
-    font-weight: bold;
-    line-height: 1;
-  }
-  
-  .main-nav {
     position: relative;
     display: flex !important;
     align-items: center !important;
     margin-left: auto !important;
   }
-  
+
+  /* Hamburger menu - VISIBLE on mobile */
   .mobile-menu-toggle {
     display: flex !important;
     position: relative !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 28px !important;
+    height: 20px !important;
+    cursor: pointer !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
     margin-left: auto !important;
     z-index: 10001 !important;
+  }
+  
+  .mobile-menu-toggle span {
+    display: block !important;
+    width: 100% !important;
+    height: 2px !important;
+    background: #000000 !important;
+    border-radius: 2px !important;
+  }
+  
+  /* Home page - white hamburger */
+  :root:has(.hero) .mobile-menu-toggle span {
+    background: #ffffff !important;
+  }
+  
+  :root:not(:has(.hero)) .mobile-menu-toggle span {
+    background: #000000 !important;
   }
   
   /* Hero Mobile */
