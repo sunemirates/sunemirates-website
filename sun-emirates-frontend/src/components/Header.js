@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
 
   const navLinks = [
     { path: "/", label: "Home" },
@@ -20,8 +33,10 @@ const Header = () => {
     setMobileMenuOpen(false);
   };
 
+  const headerClass = `header${isScrolled || !isHome ? ' header-scrolled' : ''}${isHome ? ' header-home' : ''}`;
+
   return (
-    <header className="header">
+    <header className={headerClass}>
       <div className="header-main">
         <div className="container">
 
@@ -33,7 +48,7 @@ const Header = () => {
               className="logo-img"
             />
 
-            <div className={`logo-text ${isHome ? 'home-page' : ''}`}>
+            <div className="logo-text">
               <h2>SUN EMIRATES</h2>
               <span>MECHANICAL WORKS L.L.C.</span>
             </div>
@@ -41,7 +56,7 @@ const Header = () => {
 
           {/* NAV */}
           <nav className="main-nav">
-            <ul className={mobileMenuOpen ? "open" : ""}>
+            <ul className={`nav-list ${mobileMenuOpen ? "open" : ""}`}>
               {navLinks.map((link) => (
                 <li key={link.path}>
                   <NavLink
@@ -58,11 +73,12 @@ const Header = () => {
             </ul>
 
             {/* MOBILE MENU TOGGLE */}
-            <div
-              className="mobile-menu-toggle"
+            <button
+              className={`mobile-menu-toggle ${mobileMenuOpen ? "open" : ""}`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
+              type="button"
             >
               {!mobileMenuOpen ? (
                 <>
@@ -73,7 +89,7 @@ const Header = () => {
               ) : (
                 <span className="close-icon">✕</span>
               )}
-            </div>
+            </button>
           </nav>
 
         </div>
