@@ -98,11 +98,34 @@ const Header = () => {
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
               type="button"
+              style={{
+                background: "transparent",
+                border: "none",
+                cursor: "pointer",
+                padding: "8px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
             >
               {menuOpen ? (
-                <span className="close-icon">✕</span>
+                <span
+                  style={{
+                    fontSize: "22px",
+                    color: "inherit",
+                    lineHeight: 1,
+                    display: "inline-flex",
+                  }}
+                >✕</span>
               ) : (
-                <span className="hamburger-icon">☰</span>
+                <span
+                  style={{
+                    fontSize: "28px",
+                    color: "inherit",
+                    lineHeight: 1,
+                    display: "inline-flex",
+                  }}
+                >☰</span>
               )}
             </button>
           </nav>
