@@ -3260,29 +3260,10 @@ textarea {
     margin-left: auto !important;
   }
   
-  /* Hide ALL spans inside toggle on mobile */
-  .mobile-menu-toggle span:not(.hamburger-icon):not(.close-icon) {
+  /* Hide default spans, show hamburger icon */
+  .mobile-menu-toggle span {
     display: none !important;
-    width: 0 !important;
-    height: 0 !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-
-  .hamburger-icon {
-    display: inline-flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-size: 26px !important;
-    color: #ffffff !important;
-  }
-
-  .close-icon {
-    display: inline-flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-size: 22px !important;
-    color: #ffffff !important;
+    background: transparent !important;
   }
   
   .mobile-menu-toggle .hamburger-icon {
