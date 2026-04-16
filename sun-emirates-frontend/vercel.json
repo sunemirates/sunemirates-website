@@ -5,5 +5,12 @@
     }
   },
   "outputDirectory": "build",
-  "framework": "create-react-app"
+  "framework": "create-react-app",
+
+  "routes": [
+    {
+      "src": "/(.*)\\.aspx",
+      "status": 410
+    }
+  ]
 }
