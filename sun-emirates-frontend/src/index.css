@@ -3246,8 +3246,105 @@ textarea {
   }
   
   /* ===== NAVIGATION ===== */
-  .main-nav {
+.main-nav {
     position: relative !important;
+  }
+
+  /* Hide horizontal nav on mobile by default */
+  .nav-links {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* Show nav-links when active class is applied */
+  .nav-links.active {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    width: auto !important;
+    min-width: 200px !important;
+    max-width: 280px !important;
+    flex-direction: column !important;
+    background: #2b2b2b !important;
+    padding: 10px 0 !important;
+    gap: 0 !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25) !important;
+    z-index: 99999 !important;
+    border-radius: 0 0 0 8px !important;
+  }
+
+  /* Mobile Menu Toggle - Hamburger button */
+  .mobile-menu-toggle {
+    display: flex !important;
+    position: absolute !important;
+    right: 10px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 44px !important;
+    height: 44px !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 8px !important;
+    flex-shrink: 0 !important;
+    z-index: 99999 !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Show hamburger icon */
+  .mobile-menu-toggle span {
+    display: inline-flex !important;
+    font-size: 26px !important;
+    line-height: 1 !important;
+  }
+
+  /* Header home (hero) - white hamburger */
+  :root:has(.hero) .mobile-menu-toggle span,
+  .header-home .mobile-menu-toggle span {
+    color: #ffffff !important;
+  }
+
+  /* Inner pages / scrolled - black hamburger */
+  .header-scrolled .mobile-menu-toggle span,
+  .header-inner-pages .mobile-menu-toggle span,
+  :root:not(:has(.hero)) .mobile-menu-toggle span {
+    color: #000000 !important;
+  }
+
+  .header-home .mobile-menu-toggle .hamburger-icon,
+  .header-home .hamburger-icon {
+    color: #ffffff !important;
+  }
+
+  .header-scrolled .mobile-menu-toggle .hamburger-icon,
+  .header-scrolled .hamburger-icon,
+  .header-inner-pages .mobile-menu-toggle .hamburger-icon {
+    color: #000000 !important;
+  }
+
+  /* Mobile Dropdown Menu */
+  .nav-links.active {
+    display: flex !important;
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    width: auto !important;
+    min-width: 200px !important;
+    max-width: 280px !important;
+    flex-direction: column !important;
+    background: #2b2b2b !important;
+    padding: 10px 0 !important;
+    gap: 0 !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25) !important;
+    z-index: 99999 !important;
+    border-radius: 0 0 0 8px !important;
   }
   
   /* Hide horizontal nav on mobile */
