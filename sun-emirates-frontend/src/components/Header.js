@@ -4,6 +4,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
   const menuRef = useRef(null);
@@ -14,6 +15,15 @@ const Header = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
@@ -91,43 +101,45 @@ const Header = () => {
               ))}
             </ul>
 
-            {/* MOBILE MENU TOGGLE - Hamburger icon */}
-            <button
-              className={`mobile-menu-toggle ${menuOpen ? "open" : ""}`}
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={menuOpen}
-              type="button"
-              style={{
-                background: "transparent",
-                border: "none",
-                cursor: "pointer",
-                padding: "8px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              {menuOpen ? (
-                <span
-                  style={{
-                    fontSize: "22px",
-                    color: "inherit",
-                    lineHeight: 1,
-                    display: "inline-flex",
-                  }}
-                >✕</span>
-              ) : (
-                <span
-                  style={{
-                    fontSize: "28px",
-                    color: "inherit",
-                    lineHeight: 1,
-                    display: "inline-flex",
-                  }}
-                >☰</span>
-              )}
-            </button>
+            {/* MOBILE MENU TOGGLE - Hamburger icon (only on mobile) */}
+            {isMobile && (
+              <button
+                className={`mobile-menu-toggle ${menuOpen ? "open" : ""}`}
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label={menuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={menuOpen}
+                type="button"
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  cursor: "pointer",
+                  padding: "8px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                {menuOpen ? (
+                  <span
+                    style={{
+                      fontSize: "22px",
+                      color: "inherit",
+                      lineHeight: 1,
+                      display: "inline-flex",
+                    }}
+                  >✕</span>
+                ) : (
+                  <span
+                    style={{
+                      fontSize: "28px",
+                      color: "inherit",
+                      lineHeight: 1,
+                      display: "inline-flex",
+                    }}
+                  >☰</span>
+                )}
+              </button>
+            )}
           </nav>
 
         </div>
