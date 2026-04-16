@@ -3257,6 +3257,7 @@ textarea {
     flex-shrink: 0 !important;
     z-index: 9999 !important;
     color: inherit !important;
+    margin-left: auto !important;
   }
   
   /* Hide default spans, show hamburger icon */
