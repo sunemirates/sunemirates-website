@@ -3044,12 +3044,10 @@ textarea {
     font-size: 13px !important;
   }
   
-  /* Show hamburger on tablet */
+  /* Show hamburger on tablet, hide desktop nav */
   .mobile-menu-toggle {
     display: flex !important;
   }
-  
-  /* Hide desktop nav on tablet */
   .main-nav .nav-links {
     display: none !important;
   }
