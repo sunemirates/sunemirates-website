@@ -3044,6 +3044,22 @@ textarea {
     font-size: 13px !important;
   }
   
+  .hero {
+    height: 100vh !important;
+  }
+  
+  .logo-text span {
+    font-size: 10px !important;
+  }
+  
+  .main-nav ul {
+    gap: 18px !important;
+  }
+  
+  .main-nav a {
+    font-size: 13px !important;
+  }
+  
   /* Show hamburger on tablet, hide desktop nav */
   .mobile-menu-toggle {
     display: flex !important;
