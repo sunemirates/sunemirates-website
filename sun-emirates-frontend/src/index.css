@@ -2566,6 +2566,23 @@ textarea {
     overflow-x: hidden;
   }
   
+  /* ===== ABOUT SECTION ===== */
+  .about-section {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .about-section .about-content:first-of-type {
+    order: 1;
+  }
+  .about-section .about-image {
+    order: 2;
+    width: 100%;
+  }
+  .about-section .about-content:last-of-type {
+    order: 3;
+  }
+  
   /* ===== HEADER / NAVBAR ===== */
   .header {
     height: auto !important;
