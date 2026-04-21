@@ -83,7 +83,7 @@ const ContactUs = () => {
                 <div className="contact-details">
                   <h4>Address</h4>
                   <p>
-                    P.O. Box: 14655<br />
+                    A4,  A5,  A8<br />
                     Al Shenaya New Industrial Area<br />
                     Ajman, United Arab Emirates
                   </p>
@@ -96,7 +96,7 @@ const ContactUs = () => {
                   <h4>Phone</h4>
                   <p>
                     +971-6-7481646 (Office)<br />
-                    +971-6-7481647 (Fax)<br />
+                    
                     +971-50-7743556 (Mobile)
                   </p>
                 </div>
@@ -109,7 +109,8 @@ const ContactUs = () => {
                   <p>
                     sales@sunemirates.com<br />
                     saminathan@sunemirates.com<br />
-                    sunemirates@gmail.com
+                    sunemirates@gmail.com<br />
+                    www.sunemirates.com
                   </p>
                 </div>
               </div>
