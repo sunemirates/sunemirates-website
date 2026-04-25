@@ -63,7 +63,7 @@ const Footer = () => {
               <strong>Email:</strong> sales@sunemirates.com
             </p>
             <a href="/Sunemirates Brochure.pdf" download className="btn-brochure">
-              Download Brochure
+              Download Company Profile
             </a>
           </div>
         </div>

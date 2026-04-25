@@ -2523,6 +2523,28 @@ textarea {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  /* Footer - Stack columns on mobile */
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    
+    .footer-section {
+      text-align: center;
+    }
+    
+    .footer-section h4::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .footer-section p,
+    .footer-section a {
+      text-align: center;
+    }
+  }
 
   /* Floating buttons tablet */
   .chat-toggle-btn {
