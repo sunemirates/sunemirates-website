@@ -49,7 +49,7 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Contact Us</h4>
             <p>
-              P.O. Box: 14655<br />
+            A4,A5,A8<br />
               Al Shenaya New Industrial Area<br />
               Ajman, U.A.E
             </p>
