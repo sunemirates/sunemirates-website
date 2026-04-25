@@ -780,7 +780,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -789,8 +789,8 @@ textarea {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 8px;
+  font-weight: 300;
   color: #111827;
   padding: 8px 12px;
   border-radius: 6px;
