@@ -774,12 +774,14 @@ textarea {
   padding: 20px 0;
   border-top: 1px solid #e5e7eb;
   border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  margin-left:10px;
 }
 
 .services-bar-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   max-width: 800px;
   margin: 0 auto;
   padding: 0 24px;
@@ -787,15 +789,16 @@ textarea {
 
 .service-item {
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 10px;
-  font-size: 8px;
+  font-size: 13px;
   font-weight: 300;
   color: #111827;
   padding: 8px 12px;
   border-radius: 6px;
   transition: all 0.3s ease;
   cursor: pointer;
+  font-weight: bolder;
 }
 
 .service-item:hover {
@@ -804,12 +807,12 @@ textarea {
 }
 
 .service-icon {
-  font-size: 20px;
+  font-size: 14px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
+  align-items: left;
+  justify-content: left;
+  width: 12px;
+  height: 12px;
 }
 
 /* ==================== ABOUT SECTION ==================== */
