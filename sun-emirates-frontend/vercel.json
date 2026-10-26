@@ -1,0 +1,16 @@
+{
+  "build": {
+    "env": {
+      "NODE_VERSION": "18"
+    }
+  },
+  "outputDirectory": "build",
+  "framework": "create-react-app",
+
+  "routes": [
+    {
+      "src": "/(.*)\\.aspx",
+      "status": 410
+    }
+  ]
+}
